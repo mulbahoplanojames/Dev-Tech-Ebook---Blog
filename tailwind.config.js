@@ -9,6 +9,9 @@ export default {
       backgroundColor: {
         1: "#1c3d5b",
       },
+      width: {
+        sx: "430px",
+      },
     },
   },
   plugins: [],
