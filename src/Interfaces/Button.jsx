@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Button = (props) => {
   const { text } = props;
 
   return (
     <>
-      <a href="" className="btn">
+      <Link to="" className="btn">
         {text}
-      </a>
+      </Link>
     </>
   );
 };
