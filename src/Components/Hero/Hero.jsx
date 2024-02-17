@@ -1,13 +1,11 @@
-import React from "react";
-
 const Hero = () => {
   return (
     <>
-      <div className="lg:py-20 py-14 px-5 lg:px-12">
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  gap-7  items-center justify-center">
-          <div className="max-w-xl py-6 p-10">
+      <div className="lg:py-20 py-14 px-3 lg:px-12">
+        <div className="hero">
+          <div className="max-w-xl lg:py-6 lg:px-10 py-3 px-3">
             <h3 className="text-lg pb-4">_Dev!Tech</h3>
-            <h1 className="text-4xl font-semibold pb-4">
+            <h1 className="lg:text-4xl text-3xl font-semibold pb-4">
               Let &apos;s Learn Together
             </h1>
             <p className="text-lg">
@@ -19,12 +17,8 @@ const Hero = () => {
               relevant, and shape a successful path in technology.
             </p>
           </div>
-          <div className="max-w-xl h-80 bg-blue-600  rounded-md">
-            <img
-              src="src/assets/hero.jpg"
-              alt=""
-              className="w-full h-full object-cover"
-            />
+          <div className="max-w-xl lg:h-96 sm:h-80  h-80 rounded-md order-first lg:order-last md:order-last">
+            <img src="src/assets/hero.jpg" alt="" className="w-full h-full " />
           </div>
         </div>
       </div>

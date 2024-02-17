@@ -10,7 +10,11 @@ export default {
         1: "#1c3d5b",
       },
       width: {
+        1: "400px",
+        2: "330px",
+        3: "210px",
         sx: "430px",
+        Offerscard: "520px",
       },
     },
   },
