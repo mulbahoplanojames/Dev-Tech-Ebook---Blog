@@ -14,7 +14,7 @@ const CallToActionTwo = () => {
               to="https://www.instagram.com/oplanojames?igsh=ZnRkc2MwOXlqYTdu"
               target="blank"
             >
-              <FaInstagram className="lg:size-20 size-8 text-white" />``
+              <FaInstagram className="lg:size-20 size-8 text-white" />
             </Link>
           </div>
         </div>

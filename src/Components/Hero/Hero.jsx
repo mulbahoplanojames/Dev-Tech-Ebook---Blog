@@ -1,3 +1,4 @@
+import heroImg from "/src/assets/hero.jpg";
 const Hero = () => {
   return (
     <>
@@ -18,7 +19,11 @@ const Hero = () => {
             </p>
           </div>
           <div className="max-w-xl lg:h-96 sm:h-80  h-80 rounded-md order-first lg:order-last md:order-last">
-            <img src="src/assets/hero.jpg" alt="" className="w-full h-full " />
+            <img
+              src={heroImg}
+              alt="Image of team working together"
+              className="w-full h-full "
+            />
           </div>
         </div>
       </div>
