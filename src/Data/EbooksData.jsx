@@ -23,3 +23,9 @@ export const ebooks = [
   { id: 8, title: "JavaScript Ebook", image: Python, href: "" },
   { id: 9, title: "Java Ebook", image: Java, href: "" },
 ];
+
+export const advertisementDetails = [
+  { id: 1, label: "HTML Essentials", image: HTMl },
+  { id: 2, label: "Python Essentials", image: Python },
+  { id: 3, label: "JavaScript Essentials", image: Javascript },
+];
