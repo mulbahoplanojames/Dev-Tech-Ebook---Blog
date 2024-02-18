@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../Interfaces/Button";
+import { Link } from "react-router-dom";
 
 const OffersCard = (props) => {
   const { title, description, image, href } = props;
@@ -13,9 +14,9 @@ const OffersCard = (props) => {
         <div className="py-4 px-3 w-1 ">
           <h1 className="text-2xl pb-3">{title}</h1>
           <p className="text-base pb-5">{description}</p>
-          <a href={href}>
+          <Link to={href}>
             <Button text={"Read More"} />
-          </a>
+          </Link>
         </div>
       </div>
     </>

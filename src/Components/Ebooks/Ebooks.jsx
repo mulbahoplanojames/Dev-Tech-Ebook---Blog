@@ -6,7 +6,7 @@ const Ebooks = () => {
   return (
     <>
       <div className="">
-        <div className="bg-yellow-200 grid sm:grid-cols-12 grid-cols-2 px-3 py-12">
+        <div className="grid sm:grid-cols-12 grid-cols-2 px-3 py-12 space-x-10">
           {/* advertisement sidebar */}
           <div className="sidebar">
             {advertisementDetails.map((ads) => {

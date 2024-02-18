@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
             <p className="pb-2 flex items-center gap-x-2 text-lg ">
               <FaBook />
-              <Link to="">E-books</Link>
+              <Link to="/ebooks">E-books</Link>
             </p>
             <p className="pb-2 flex items-center gap-x-2 text-lg ">
               <BsCardList />

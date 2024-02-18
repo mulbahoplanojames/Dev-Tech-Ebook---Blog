@@ -4,6 +4,7 @@ import HTMl from "/src/assets/html.jpg";
 import Java from "/src/assets/JavaBOOK.png";
 import CPlus from "/src/assets/Cplus.png";
 import C from "/src/assets/C.png";
+import C2 from "/src/assets/C.jpg";
 
 export const ourEbooks = [
   { id: 1, title: "JavaScript Ebook", image: Python, href: "" },
@@ -28,4 +29,5 @@ export const advertisementDetails = [
   { id: 1, label: "HTML Essentials", image: HTMl },
   { id: 2, label: "Python Essentials", image: Python },
   { id: 3, label: "JavaScript Essentials", image: Javascript },
+  { id: 4, label: "C Essentials", image: C2 },
 ];
