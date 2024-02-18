@@ -16,7 +16,9 @@ const Footer = () => {
     <>
       <div className="lg:px-20 px-3 py-12 bg-1">
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 place-items-center text-white">
-          <h1 className="text-6xl text-white font-semibold">Dev!tech</h1>
+          <h1 className="lg:text-5xl  text-3xl text-white font-semibold">
+            Dev!tech
+          </h1>
           <div className="order-first">
             <h1 className="text-2xl pb-2 ">Info</h1>
             <p className="pb-2 flex items-center gap-x-2 text-lg text-white">
