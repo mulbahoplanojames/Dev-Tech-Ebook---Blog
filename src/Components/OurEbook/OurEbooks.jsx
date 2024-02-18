@@ -2,6 +2,7 @@ import React from "react";
 import EbookCard from "../EbooksCard/EbookCard";
 import { ourEbooks } from "../../Data/EbooksData";
 import Button from "../../Interfaces/Button";
+import { Link } from "react-router-dom";
 
 const OurEbooks = () => {
   return (
@@ -19,7 +20,9 @@ const OurEbooks = () => {
             );
           })}
         </div>
-        <Button text={"Click here for more e-books"} className="mt-12" />
+      <Link to="/ebooks">
+          <Button text={"Click here for more e-books"} className="mt-12" />
+        </Link>
       </div>
     </>
   );
