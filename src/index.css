@@ -12,4 +12,7 @@
   .call-to-action {
     @apply w-full h-48 lg:rounded-full rounded-lg  flex justify-between items-center gap-x-8 lg:px-16 px-3 shadow-lg cursor-pointer animate-bounce;
   }
+  .icon-wripper {
+    @apply w-11 h-11 rounded-md flex justify-center items-center cursor-pointer font-bold border-2 hover:shadow-xl;
+  }
 }
