@@ -29,6 +29,7 @@ const Ebooks = () => {
                     key={ebook.id}
                     title={ebook.title}
                     image={ebook.image}
+                    href={ebook.href}
                   />
                 );
               })}

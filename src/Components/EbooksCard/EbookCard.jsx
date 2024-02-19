@@ -1,5 +1,5 @@
-import React from "react";
 import Button from "../../Interfaces/Button";
+import { Link } from "react-router-dom";
 
 const EbookCard = (props) => {
   const { title, image, href } = props;
@@ -17,7 +17,9 @@ const EbookCard = (props) => {
           </div>
           <div className="text-center">
             <h1 className="py-3 text-2xl">{title}</h1>
-            <Button text={"Download"} />
+            <Link to={href}>
+              <Button text={"Download"} />
+            </Link>
           </div>
         </div>
       </div>

@@ -14,17 +14,61 @@ export const ourEbooks = [
 ];
 
 export const ebooks = [
-  { id: 1, title: "JavaScript Ebook", image: Javascript, href: "" },
-  { id: 2, title: "Python Ebook", image: Python, href: "" },
-  { id: 3, title: "HTML Ebook", image: HTMl, href: "" },
-  { id: 4, title: "Java Ebook", image: Java, href: "" },
-  { id: 5, title: "C++ Ebook", image: CPlus, href: "" },
-  { id: 6, title: "C Ebook", image: C, href: "" },
-  { id: 7, title: "HTML Ebook", image: HTMl, href: "" },
-  { id: 8, title: "JavaScript Ebook", image: Javascript, href: "" },
-  { id: 9, title: "Java Ebook", image: Java, href: "" },
+  {
+    id: 1,
+    title: "JavaScript Ebook",
+    image: Javascript,
+    href: "/ebooks/javaScriptebook",
+  },
+  {
+    id: 2,
+    title: "Python Ebook",
+    image: Python,
+    href: "/ebooks/pythonebook",
+  },
+  {
+    id: 3,
+    title: "HTML Ebook",
+    image: HTMl,
+    href: "/ebooks/htmlebook",
+  },
+  {
+    id: 4,
+    title: "Java Ebook",
+    image: Java,
+    href: "/ebooks/javaebook",
+  },
+  {
+    id: 5,
+    title: "C++ Ebook",
+    image: CPlus,
+    href: "/ebooks/C++ebook",
+  },
+  {
+    id: 6,
+    title: "C Ebook",
+    image: C,
+    href: "/ebooks/Cebook",
+  },
+  {
+    id: 7,
+    title: "HTML Ebook",
+    image: HTMl,
+    href: "/ebooks/htmlebook",
+  },
+  {
+    id: 8,
+    title: "JavaScript Ebook",
+    image: Javascript,
+    href: "/ebooks/javaScriptebook",
+  },
+  {
+    id: 9,
+    title: "Java Ebook",
+    image: Java,
+    href: "/ebooks/javaebook",
+  },
 ];
-
 export const advertisementDetails = [
   { id: 1, label: "HTML Essentials", image: HTMl },
   { id: 2, label: "Python Essentials", image: Python },
