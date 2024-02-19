@@ -18,7 +18,7 @@ const PythonEbook = () => {
           <h1 className="sm:text-4xl text-2xl pb-2">Python E-book</h1>
           <p className="text-xl pb-1">Topics covers in this E-book</p>
           <p className="text-lg pb-3">Description :</p>
-          <ol className="list-decimal list-inside pb-4 text-lg">
+          <ol className="list-decimal list-inside pb-6 text-lg">
             <li>Introduction to Python</li>
             <li>Installation</li>
             <li>Modules</li>
