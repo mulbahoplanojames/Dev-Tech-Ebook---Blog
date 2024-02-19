@@ -3,7 +3,14 @@ const Button = (props) => {
 
   return (
     <>
-      <button className="btn">{text}</button>
+      <button
+        className="btn"
+        onClick={() => {
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }}
+      >
+        {text}
+      </button>
     </>
   );
 };

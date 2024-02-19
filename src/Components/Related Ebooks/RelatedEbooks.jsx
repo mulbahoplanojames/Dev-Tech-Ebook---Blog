@@ -13,7 +13,7 @@ const RelatedEbooks = () => {
                 key={relatedebook.id}
                 title={relatedebook.title}
                 image={relatedebook.image}
-                herf={relatedebook.href}
+                href={relatedebook.href}
               />
             );
           })}

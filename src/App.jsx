@@ -5,6 +5,7 @@ import Ebook from "./Pages/Ebook";
 import Footer from "./Layout/Footer";
 import PythonEbook from "./Components/List Of Ebooks/Python Ebook/PythonEbook";
 import JavaScriptEbook from "./Components/List Of Ebooks/JavaScript Ebook/JavaScriptEbook";
+import HtmlEbook from "./Components/List Of Ebooks/Html Ebook/HtmlEbook";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/ebooks" element={<Ebook />} />
           <Route path="/ebooks/pythonebook" element={<PythonEbook />} />
           <Route path="/ebooks/javaScriptebook" element={<JavaScriptEbook />} />
+          <Route path="/ebooks/htmlebook" element={<HtmlEbook />} />
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>
