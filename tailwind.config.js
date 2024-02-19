@@ -16,6 +16,9 @@ export default {
         sx: "430px",
         Offerscard: "520px",
       },
+      height: {
+        1: "38rem",
+      },
     },
   },
   plugins: [],

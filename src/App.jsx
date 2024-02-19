@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/ebooks" element={<Ebook />} />
           <Route path="/ebooks/pythonebook" element={<PythonEbook />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

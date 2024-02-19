@@ -1,11 +1,12 @@
 import Button from "../../../Interfaces/Button";
+import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
 import Python from "/src/assets/PYTHON_BOOK.png";
 import TelegramCallToAction from "/src/Components/CallTOAction/CallToAction.jsx";
 
 const PythonEbook = () => {
   return (
     <div>
-      <div className="h-fit grid sm:grid-cols-12 grid-cols-2 sm:gap-28 gap-y-4 sm:px-20 px-3 py-12 ">
+      <div className="h-fit grid sm:grid-cols-12 grid-cols-2 sm:gap-24 gap-y-4 sm:px-20 px-3 py-12">
         <div className="col-span-4 lg:h-1 h-80 px-3 py-5 rounded-lg">
           <img
             src={Python}
@@ -38,6 +39,7 @@ const PythonEbook = () => {
       </div>
 
       <TelegramCallToAction />
+      <RelatedEbooks />
     </div>
   );
 };

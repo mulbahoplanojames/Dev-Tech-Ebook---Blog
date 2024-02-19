@@ -69,6 +69,46 @@ export const ebooks = [
     href: "/ebooks/javaebook",
   },
 ];
+
+export const relatedEbooks = [
+  {
+    id: 1,
+    title: "JavaScript Ebook",
+    image: Javascript,
+    href: "/ebooks/javaScriptebook",
+  },
+  {
+    id: 2,
+    title: "Python Ebook",
+    image: Python,
+    href: "/ebooks/pythonebook",
+  },
+  {
+    id: 3,
+    title: "HTML Ebook",
+    image: HTMl,
+    href: "/ebooks/htmlebook",
+  },
+  {
+    id: 4,
+    title: "Java Ebook",
+    image: Java,
+    href: "/ebooks/javaebook",
+  },
+  {
+    id: 5,
+    title: "C++ Ebook",
+    image: CPlus,
+    href: "/ebooks/C++ebook",
+  },
+  {
+    id: 6,
+    title: "C Ebook",
+    image: C,
+    href: "/ebooks/Cebook",
+  },
+];
+
 export const advertisementDetails = [
   { id: 1, label: "HTML Essentials", image: HTMl },
   { id: 2, label: "Python Essentials", image: Python },
