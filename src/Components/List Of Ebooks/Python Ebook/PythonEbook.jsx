@@ -5,8 +5,8 @@ import TelegramCallToAction from "/src/Components/CallTOAction/CallToAction.jsx"
 
 const PythonEbook = () => {
   return (
-    <div>
-      <div className="h-fit grid sm:grid-cols-12 grid-cols-2 sm:gap-24 gap-y-4 sm:px-20 px-3 py-12">
+    <>
+      <div className="h-fit grid sm:grid-cols-12 grid-cols-2  sm:gap-14 gap-y-4 sm:px-24 px-3 py-12">
         <div className="col-span-4 lg:h-1 h-80 px-3 py-5 rounded-lg">
           <img
             src={Python}
@@ -14,7 +14,7 @@ const PythonEbook = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="col-span-8 h-fit py-5 px-10">
+        <div className="col-span-8 h-fit py-5 px-10 ">
           <h1 className="sm:text-4xl text-2xl pb-2">Python E-book</h1>
           <p className="text-xl pb-1">Topics covers in this E-book</p>
           <p className="text-lg pb-3">Description :</p>
@@ -40,7 +40,7 @@ const PythonEbook = () => {
 
       <TelegramCallToAction />
       <RelatedEbooks />
-    </div>
+    </>
   );
 };
 
