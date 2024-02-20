@@ -7,9 +7,19 @@ import C from "/src/assets/C.png";
 import C2 from "/src/assets/C.jpg";
 
 export const ourEbooks = [
-  { id: 1, title: "JavaScript Ebook", image: Python, href: "" },
-  { id: 2, title: "Python Ebook", image: Javascript, href: "" },
-  { id: 3, title: "HTML Ebook", image: HTMl, href: "" },
+  {
+    id: 1,
+    title: "JavaScript Ebook",
+    image: Python,
+    href: "/ebooks/pythonebook",
+  },
+  {
+    id: 2,
+    title: "Python Ebook",
+    image: Javascript,
+    href: "/ebooks/javaScriptebook",
+  },
+  { id: 3, title: "HTML Ebook", image: HTMl, href: "/ebooks/htmlebook" },
   //   { id: 4, title: "HTML Ebook", image: HTMl, href: "" },
 ];
 

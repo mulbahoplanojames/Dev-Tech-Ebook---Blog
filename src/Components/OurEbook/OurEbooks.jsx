@@ -16,11 +16,12 @@ const OurEbooks = () => {
                 key={ebook.id}
                 title={ebook.title}
                 image={ebook.image}
+                href={ebook.href}
               />
             );
           })}
         </div>
-      <Link to="/ebooks">
+        <Link to="/ebooks">
           <Button text={"Click here for more e-books"} className="mt-12" />
         </Link>
       </div>
