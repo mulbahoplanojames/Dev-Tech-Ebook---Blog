@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl">
+      <nav className="flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl fixed w-full z-10">
         <a href="/" className="text-3xl font-bold">
           Dev <span className="text-1">!Tech</span>
         </a>
@@ -45,7 +45,7 @@ const Navbar = () => {
       {/* Navbar for Smaller Devices  */}
       {isMenuOpen && (
         <div>
-          <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  ">
+          <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  z-40">
             <div
               className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
               onClick={() => {
