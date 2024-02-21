@@ -1,7 +1,7 @@
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "ebooks", label: "Ebooks" },
-  { href: "blog", label: "Blog" },
+  { href: "/ebooks", label: "Ebooks" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default navLinks;
