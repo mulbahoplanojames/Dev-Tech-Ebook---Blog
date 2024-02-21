@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TbMenu2 } from "react-icons/tb";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import navLinks from "../Constants/Constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,28 +10,28 @@ const Navbar = () => {
   return (
     <>
       <nav className="flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl fixed top-0 w-full z-10">
-        <a href="/" className="text-3xl font-bold">
+        <Link to="/" className="text-3xl font-bold">
           Dev <span className="text-1">!Tech</span>
-        </a>
+        </Link>
         <ul className="max-lg:hidden">
           {navLinks.map((navlink) => (
             <li key={navlink.label} className="inline-block px-10">
-              <a
-                href={navlink.href}
+              <Link
+                to={navlink.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray"
               >
                 {navlink.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
         <div className="flex gap-x-2">
-          <a
-            href=""
+          <Link
+            to=""
             className="bg-1 py-1.5 lg:px-8 px-4 text-base lg:text-lg rounded-lg  text-white"
           >
             Let&apos;s&apos; Chat
-          </a>
+          </Link>
 
           <TbMenu2
             className="hidden max-lg:block cursor-pointer text-4xl"
@@ -56,12 +57,12 @@ const Navbar = () => {
             <ul className=" lg:hidden flex flex-col items-center justify-center h-[500px] bg-1 gap-y-7 z-40">
               {navLinks.map((navlink) => (
                 <li key={navlink.label}>
-                  <a
-                    href={navlink.href}
+                  <Link
+                    to={navlink.href}
                     className="font-montserrat leading-normal text-2xl text-white"
                   >
                     {navlink.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
