@@ -6,7 +6,7 @@ const Button = (props) => {
       <button
         className="btn"
         onClick={() => {
-          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          window.scrollTo({ top: 0, left: 0 });
         }}
       >
         {text}

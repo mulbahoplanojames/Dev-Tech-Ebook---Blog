@@ -14,7 +14,7 @@ const Ebooks = () => {
                 <AdvertisementCard
                   key={ads.id}
                   label={ads.label}
-                  image={ads.image}
+                  image={ads.image} 
                 />
               );
             })}

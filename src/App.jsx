@@ -7,6 +7,8 @@ import PythonEbook from "./Components/List Of Ebooks/Python Ebook/PythonEbook";
 import JavaScriptEbook from "./Components/List Of Ebooks/JavaScript Ebook/JavaScriptEbook";
 import HtmlEbook from "./Components/List Of Ebooks/Html Ebook/HtmlEbook";
 import JavaEbook from "./Components/List Of Ebooks/Java Ebook/JavaEbook";
+import CEbook from "./Components/List Of Ebooks/C Ebook/CEbook";
+import CPlusEbook from "./Components/List Of Ebooks/C++ Ebook/CPlusEbook";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="/ebooks/javaScriptebook" element={<JavaScriptEbook />} />
           <Route path="/ebooks/htmlebook" element={<HtmlEbook />} />
           <Route path="/ebooks/javaebook" element={<JavaEbook />} />
+          <Route path="/ebooks/Cebook" element={<CEbook />} />
+          <Route path="/ebooks/C++ebook" element={<CPlusEbook />} />
         </Routes>
         <Footer />
       </BrowserRouter>

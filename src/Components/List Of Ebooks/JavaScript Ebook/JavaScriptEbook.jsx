@@ -16,7 +16,7 @@ const JavaScriptEbook = () => {
           />
         </div>
         <div className="col-span-8 h-fit py-5 px-10 ">
-          <h1 className="sm:text-4xl text-2xl pb-2">Python E-book</h1>
+          <h1 className="sm:text-4xl text-2xl pb-2">JavaScript E-book</h1>
           <p className="text-xl pb-1">Topics covers in this E-book</p>
           <p className="text-lg pb-3">Description :</p>
           <div className="grid grid-cols-2 gap-9 pb-8">
