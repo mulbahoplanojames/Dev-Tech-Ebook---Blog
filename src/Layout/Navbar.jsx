@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl fixed w-full z-10">
+      <nav className="flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl fixed top-0 w-full z-10">
         <a href="/" className="text-3xl font-bold">
           Dev <span className="text-1">!Tech</span>
         </a>
@@ -24,7 +24,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
         <div className="flex gap-x-2">
           <a
             href=""

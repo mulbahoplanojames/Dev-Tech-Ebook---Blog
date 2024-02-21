@@ -6,7 +6,7 @@ import TelegramCallToAction from "/src/Components/CallTOAction/CallToAction.jsx"
 const PythonEbook = () => {
   return (
     <>
-      <div className="h-fit grid sm:grid-cols-12 grid-cols-2  sm:gap-14 gap-y-4 sm:px-24 px-3 py-12">
+      <div className="h-fit grid sm:grid-cols-12 grid-cols-2  sm:gap-14 gap-y-4 sm:px-24 px-3 py-12 mt-20 ">
         <div className="col-span-4 lg:h-1 h-80 px-3 py-5 rounded-lg">
           <img
             src={Python}

@@ -2,7 +2,7 @@ import heroImg from "/src/assets/hero.jpg";
 const Hero = () => {
   return (
     <>
-      <div className="lg:py-20 py-14 px-3 lg:px-12">
+      <div className="lg:py-20 py-14 px-3 lg:px-12 mt-10">
         <div className="hero">
           <div className="max-w-xl lg:py-6 lg:px-10 py-3 px-3">
             <h3 className="text-lg pb-4">_Dev!Tech</h3>

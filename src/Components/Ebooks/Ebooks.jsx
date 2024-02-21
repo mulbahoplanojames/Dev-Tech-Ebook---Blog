@@ -6,7 +6,7 @@ const Ebooks = () => {
   return (
     <>
       <div className="">
-        <div className="grid sm:grid-cols-12 grid-cols-2 px-3 py-12 space-x-10">
+        <div className="grid sm:grid-cols-12 grid-cols-2 px-3 py-12 space-x-10 mt-20">
           {/* advertisement sidebar */}
           <div className="sidebar">
             {advertisementDetails.map((ads) => {
@@ -14,7 +14,7 @@ const Ebooks = () => {
                 <AdvertisementCard
                   key={ads.id}
                   label={ads.label}
-                  image={ads.image} 
+                  image={ads.image}
                 />
               );
             })}
