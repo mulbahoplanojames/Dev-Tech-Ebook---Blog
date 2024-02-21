@@ -5,6 +5,7 @@ import Java from "/src/assets/JavaBOOK.png";
 import CPlus from "/src/assets/Cplus.png";
 import C from "/src/assets/C.png";
 import C2 from "/src/assets/C.jpg";
+import CSS from "/src/assets/css.jpg";
 
 export const ourEbooks = [
   {
@@ -62,9 +63,9 @@ export const ebooks = [
   },
   {
     id: 7,
-    title: "HTML Ebook",
-    image: HTMl,
-    href: "/ebooks/htmlebook",
+    title: "CSS Ebook",
+    image: CSS,
+    href: "/ebooks/cssebook",
   },
   {
     id: 8,

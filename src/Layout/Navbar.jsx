@@ -1,39 +1,74 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { TbMenu2 } from "react-icons/tb";
+import { MdOutlineCancelPresentation } from "react-icons/md";
 import navLinks from "../Constants/Constants";
-import { BiMenu } from "react-icons/bi";
-
-//Todo : Complete the responsiveness of the Navber on Smaller Device for toggle menu
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
-      <div className="flex justify-between items-center py-6 lg:px-24 px-4 bg-white shadow-md relative">
-        <h1 className="lg:text-3xl text-2xl font-semibold">
+      <nav className="flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl">
+        <a href="/" className="text-3xl font-bold">
           Dev <span className="text-1">!Tech</span>
-        </h1>
-        <div className="">
-          {navLinks.map((navlink) => {
-            return (
-              <Link
-                to={navlink.href}
-                key={navlink.label}
-                className="px-14 text-lg md:inline-block sm:hidden hidden hover:text-1 "
+        </a>
+        <ul className="max-lg:hidden">
+          {navLinks.map((navlink) => (
+            <li key={navlink.label} className="inline-block px-10">
+              <a
+                href={navlink.href}
+                className="font-montserrat leading-normal text-lg text-slate-gray"
               >
                 {navlink.label}
-              </Link>
-            );
-          })}
-        </div>
-        <div className="flex items-center space-x-6">
-          <Link
-            to=""
-            className="bg-1 py-1.5 lg:px-8 px-4 text-base lg:text-lg rounded-lg  text-white "
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex gap-x-2">
+          <a
+            href=""
+            className="bg-1 py-1.5 lg:px-8 px-4 text-base lg:text-lg rounded-lg  text-white"
           >
-            Let&apos;s Chat
-          </Link>
-          <BiMenu className="text-4xl lg:hidden md:hidden block text-1" />
+            Let&apos;s&apos; Chat
+          </a>
+
+          <TbMenu2
+            className="hidden max-lg:block cursor-pointer text-4xl"
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+            }}
+          />
         </div>
-      </div>
+      </nav>
+
+      {/* Navbar for Smaller Devices  */}
+      {isMenuOpen && (
+        <div>
+          <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  ">
+            <div
+              className="hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer"
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+              }}
+            >
+              <MdOutlineCancelPresentation className="text-4xl text-white " />
+            </div>
+            <ul className=" lg:hidden flex flex-col items-center justify-center h-[500px] bg-1 gap-y-7 z-40">
+              {navLinks.map((navlink) => (
+                <li key={navlink.label}>
+                  <a
+                    href={navlink.href}
+                    className="font-montserrat leading-normal text-2xl text-white"
+                  >
+                    {navlink.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
     </>
   );
 };
