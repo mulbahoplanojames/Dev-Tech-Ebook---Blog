@@ -1,13 +1,13 @@
+import Blogs from "../Components/Blogs/Blogs";
 import TelegramCallToAction from "../Components/CallTOAction/CallToAction";
-import Ebooks from "../Components/Ebooks/Ebooks";
 
-const Ebook = () => {
+const Blog = () => {
   return (
     <>
-      <Ebooks />
+      <Blogs />
       <TelegramCallToAction />
     </>
   );
 };
 
-export default Ebook;
+export default Blog;
