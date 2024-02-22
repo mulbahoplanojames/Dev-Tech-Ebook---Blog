@@ -54,7 +54,7 @@ const Navbar = () => {
             >
               <MdOutlineCancelPresentation className="text-4xl text-white " />
             </div>
-            <ul className=" lg:hidden flex flex-col items-center justify-center h-[500px] bg-1 gap-y-7 z-40">
+            <ul className=" lg:hidden flex flex-col items-center justify-center h-full bg-1 gap-y-7 z-40">
               {navLinks.map((navlink) => (
                 <li key={navlink.label}>
                   <Link
