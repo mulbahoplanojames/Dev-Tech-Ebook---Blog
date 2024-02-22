@@ -31,7 +31,7 @@ const Footer = () => {
             </p>
             <p className="pb-2 flex items-center gap-x-2 text-lg ">
               <BsCardList />
-              <Link to="">Blogs</Link>
+              <Link to="/blogs">Blogs</Link>
             </p>
             <p className="pb-2 flex items-center gap-x-2 text-lg ">
               <IoIosPeople />

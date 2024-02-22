@@ -59,7 +59,7 @@ const Navbar = () => {
                 <li key={navlink.label}>
                   <Link
                     to={navlink.href}
-                    className="font-montserrat leading-normal text-2xl text-white"
+                    className="font-montserrat leading-normal text-2xl text-white active:text-1 focus:text-blue-500"
                   >
                     {navlink.label}
                   </Link>
