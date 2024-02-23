@@ -11,6 +11,7 @@ import JavaEbook from "./Components/List Of Ebooks/Java Ebook/JavaEbook";
 import CEbook from "./Components/List Of Ebooks/C Ebook/CEbook";
 import CPlusEbook from "./Components/List Of Ebooks/C++ Ebook/CPlusEbook";
 import CSSEbook from "./Components/List Of Ebooks/CSS Ebook/CSSEbook";
+import ContactUs from "./Components/Contact Us/ContactUs";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/ebooks" element={<Ebook />} />
           <Route path="/blogs" element={<Blog />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/ebooks/pythonebook" element={<PythonEbook />} />
           <Route path="/ebooks/javaScriptebook" element={<JavaScriptEbook />} />
           <Route path="/ebooks/htmlebook" element={<HtmlEbook />} />
@@ -31,7 +33,7 @@ const App = () => {
           <Route path="/ebooks/C++ebook" element={<CPlusEbook />} />
           <Route path="/ebooks/cssebook" element={<CSSEbook />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

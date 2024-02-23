@@ -18,7 +18,7 @@ const Navbar = () => {
             <li key={navlink.label} className="inline-block px-10">
               <Link
                 to={navlink.href}
-                className="font-montserrat leading-normal text-lg text-slate-gray"
+                className="font-montserrat leading-normal text-lg text-slate-gray focus:text-1"
               >
                 {navlink.label}
               </Link>
@@ -27,10 +27,10 @@ const Navbar = () => {
         </ul>
         <div className="flex gap-x-2">
           <Link
-            to=""
-            className="bg-1 py-1.5 lg:px-8 px-4 text-base lg:text-lg rounded-lg  text-white"
+            to="/contact-us"
+            className="bg-1 py-1.5 lg:px-4 px-4 text-base lg:text-lg rounded-lg text-white hover:opacity-50"
           >
-            Let&apos;s&apos; Chat
+            Contact &nbsp;Us
           </Link>
 
           <TbMenu2
