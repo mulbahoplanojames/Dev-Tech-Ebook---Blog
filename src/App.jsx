@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/ebooks/C++ebook" element={<CPlusEbook />} />
           <Route path="/ebooks/cssebook" element={<CSSEbook />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );
