@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         1: "#1c3d5b",
+        2:'#ebecfe'
       },
       backgroundColor: {
         1: "#1c3d5b",
