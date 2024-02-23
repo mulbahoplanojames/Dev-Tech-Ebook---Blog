@@ -30,8 +30,14 @@ const ContactUs = () => {
         icon: "success",
       });
     } else {
-      console.log("Error", res);
+      console.log("Error", res);  
       setResult(res.message);
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
     }
   };
 
@@ -128,7 +134,7 @@ const ContactUs = () => {
                 ></textarea>
               </div>
               <Button text={"Submit now"} />
-              <p className="pt-4">{result}</p>
+              <p className="pt-4 text-red-500">{result}</p>
             </form>
           </div>
         </div>
