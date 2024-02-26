@@ -8,9 +8,9 @@ import Button from "../../Interfaces/Button";
 
 const JavaScriptEbbokPDF = () => {
   const [searchResult, setSearchResult] = useState({
-    word: "search",
-    partOfSpeech: "",
-    definition: "",
+    word: "",
+    partOfSpeech: "....",
+    definition: ".....",
   });
   const [name, setName] = useState("");
 
@@ -45,7 +45,7 @@ const JavaScriptEbbokPDF = () => {
             <Button text="Dounload PDF" />
           </a>
         </div>
-        <div className=" grid md:grid-cols-12 grid-cols-2 px-6 pb-24 sm:gap-y-3 gap-y-9 gap-x-5">
+        <div className=" grid md:grid-cols-12 grid-cols-2 px-6 pb-24 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5">
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
             <div className="col-span-8 h-2 lg:w-pdfWripper border-2 border-black overflow-x-auto sm:order-first order-last">
               <Viewer fileUrl={pdfFile} initialPage={1} defaultScale={0.48} />
