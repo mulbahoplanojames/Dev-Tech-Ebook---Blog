@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         1: "#1c3d5b",
-        2:'#ebecfe'
+        2: "#ebecfe",
       },
       backgroundColor: {
         1: "#1c3d5b",
@@ -16,9 +16,11 @@ export default {
         3: "210px",
         sx: "430px",
         Offerscard: "520px",
+        pdfWripper: "750px",
       },
       height: {
         1: "38rem",
+        2: "40rem",
       },
     },
   },

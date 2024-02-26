@@ -2,6 +2,7 @@ import Button from "../../../Interfaces/Button";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
 import JavaScriptImg from "/src/assets/javascript.jpg";
 import TelegramCallToAction from "../../CallTOAction/CallToAction";
+import { Link } from "react-router-dom";
 
 const JavaScriptEbook = () => {
   return (
@@ -29,7 +30,7 @@ const JavaScriptEbook = () => {
                   <li>Role in web development</li>
                   <li>Key features and characteristics</li>
                 </ul>
-                
+
                 <li className="text-lg pb-1 font-medium underline">
                   Code Structure
                 </li>
@@ -145,7 +146,9 @@ const JavaScriptEbook = () => {
               </ol>
             </div>
           </div>
-          <Button text={"Download"} />
+          <Link to="/ebooks/javaScriptebook/javaScriptebookpdf">
+            <Button text={"View and Download"} />
+          </Link>
         </div>
       </div>
 
