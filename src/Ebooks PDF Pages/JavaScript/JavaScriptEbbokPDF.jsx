@@ -22,7 +22,6 @@ const JavaScriptEbbokPDF = () => {
       .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${name}`)
       .then((res) => {
         // console.log(res.data[0]);
-        //   console.log(res.data[0].meanings[0].definitions[5]);
         setSearchResult({
           ...searchResult,
           word: res.data[0].word,
