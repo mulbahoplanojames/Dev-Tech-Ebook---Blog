@@ -16,7 +16,7 @@ export default {
         3: "210px",
         sx: "430px",
         Offerscard: "520px",
-        pdfWripper: "750px",
+        pdfWripper: "830px",
       },
       height: {
         1: "38rem",
