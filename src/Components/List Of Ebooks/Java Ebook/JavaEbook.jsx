@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../Interfaces/Button";
 import InstagramCallToAction from "../../CallTOAction/CallToActionTwo";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
@@ -24,7 +25,9 @@ const JavaEbook = () => {
             Happy Learning !
           </p>
 
-          <Button text={"Download"} />
+          <Link to="/ebooks/javaebook/javaebookpdf">
+            <Button text={"View and Download"} />
+          </Link>
         </div>
       </div>
 
