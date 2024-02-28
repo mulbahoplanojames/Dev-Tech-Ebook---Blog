@@ -21,6 +21,7 @@ import JavaScriptEbbokPDF from "./Ebooks PDF Pages/JavaScript/JavaScriptEbbokPDF
 import PythonEbookPDF from "./Ebooks PDF Pages/Python/PythonEbookPDF";
 import HtmlEbookPDF from "./Ebooks PDF Pages/HTML/HtmlEbookPDF";
 import JavaEbookPDF from "./Ebooks PDF Pages/Java/JavaEbookPDF";
+import CPlusEbookPDF from "./Ebooks PDF Pages/C Plus-Plus/CPlusEbookPDF";
 
 const App = () => {
   useEffect(() => {
@@ -64,6 +65,10 @@ const App = () => {
           <Route
             path="/ebooks/javaebook/javaebookpdf"
             element={<JavaEbookPDF />}
+          />
+          <Route
+            path="/ebooks/cplusebook/cplusebookpdf"
+            element={<CPlusEbookPDF />}
           />
         </Routes>
         <Footer />

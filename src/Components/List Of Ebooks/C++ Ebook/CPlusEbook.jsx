@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../Interfaces/Button";
 import TelegramCallToAction from "../../CallTOAction/CallToAction";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
@@ -73,7 +74,9 @@ const CPlusEbook = () => {
               </div>
             </div>
           </div>
-          <Button text={"Download"} />
+          <Link to="/ebooks/cplusebook/cplusebookpdf">
+            <Button text={"View and Download"} />
+          </Link>
         </div>
       </div>
 
