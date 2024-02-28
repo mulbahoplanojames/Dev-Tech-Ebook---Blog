@@ -19,6 +19,7 @@ import CSSEbook from "./Components/List Of Ebooks/CSS Ebook/CSSEbook";
 //! The below are the imported PDF Ebooks
 import JavaScriptEbbokPDF from "./Ebooks PDF Pages/JavaScript/JavaScriptEbbokPDF";
 import PythonEbookPDF from "./Ebooks PDF Pages/Python/PythonEbookPDF";
+import HtmlEbookPDF from "./Ebooks PDF Pages/HTML/HtmlEbookPDF";
 
 const App = () => {
   useEffect(() => {
@@ -54,6 +55,10 @@ const App = () => {
           <Route
             path="/ebooks/pythonebook/pythonebookpdf"
             element={<PythonEbookPDF />}
+          />
+          <Route
+            path="/ebooks/htmlebook/htmlebookpdf"
+            element={<HtmlEbookPDF />}
           />
         </Routes>
         <Footer />

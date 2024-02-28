@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 
-const JavaScriptEbbokPDF = () => {
+const HtmlEbookPDF = () => {
   const [searchResult, setSearchResult] = useState({
     word: "",
     partOfSpeech: "....",
@@ -84,4 +84,4 @@ const JavaScriptEbbokPDF = () => {
   );
 };
 
-export default JavaScriptEbbokPDF;
+export default HtmlEbookPDF;

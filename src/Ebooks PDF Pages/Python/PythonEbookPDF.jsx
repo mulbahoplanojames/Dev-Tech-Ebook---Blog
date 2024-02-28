@@ -74,7 +74,7 @@ const PythonEbookPDF = () => {
                 Part Of Speech : {searchResult.partOfSpeech}
               </h1>
               <h1 className="text-xl pb-4">
-                Maening : {searchResult.definition}
+                Meaning : {searchResult.definition}
               </h1>
             </div>
           </aside>

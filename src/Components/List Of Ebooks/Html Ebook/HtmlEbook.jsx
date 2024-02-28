@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../Interfaces/Button";
 import TelegramCallToAction from "../../CallTOAction/CallToAction";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
@@ -24,7 +25,9 @@ const HtmlEbook = () => {
             Happy Learning !
           </p>
 
-          <Button text={"Download"} />
+          <Link to="/ebooks/htmlebook/htmlebookpdf">
+            <Button text={"View and Download"} />
+          </Link>
         </div>
       </div>
 
