@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../Interfaces/Button";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
 import Python from "/src/assets/PYTHON_BOOK.png";
@@ -34,7 +35,9 @@ const PythonEbook = () => {
             <li>Strings</li>
             <li>Functions</li>
           </ol>
-          <Button text={"Download"} />
+          <Link to="/ebooks/pythonebook/pythonebookpdf">
+            <Button text={"View and Download"} />
+          </Link>
         </div>
       </div>
 
