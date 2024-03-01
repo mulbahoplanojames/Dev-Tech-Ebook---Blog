@@ -23,7 +23,7 @@ import HtmlEbookPDF from "./Ebooks PDF Pages/HTML/HtmlEbookPDF";
 import JavaEbookPDF from "./Ebooks PDF Pages/Java/JavaEbookPDF";
 import CPlusEbookPDF from "./Ebooks PDF Pages/C Plus-Plus/CPlusEbookPDF";
 import CEbookPDF from "./Ebooks PDF Pages/C/CEbookPDF";
-
+import CSSEbookPDF from "./Ebooks PDF Pages/CSS/CSSEbookPDF";
 
 const App = () => {
   useEffect(() => {
@@ -73,6 +73,7 @@ const App = () => {
             element={<CPlusEbookPDF />}
           />
           <Route path="/ebooks/cbook/cebookpdf" element={<CEbookPDF />} />
+          <Route path="/ebooks/cssbook/cssebookpdf" element={<CSSEbookPDF />} />
         </Routes>
         <Footer />
       </BrowserRouter>

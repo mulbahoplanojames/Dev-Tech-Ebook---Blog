@@ -12,6 +12,10 @@ import { IoIosPeople } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, left: 0 });
+  };
+
   return (
     <>
       <div className="lg:px-20 px-3 py-12 bg-1">
@@ -21,19 +25,31 @@ const Footer = () => {
           </h1>
           <div className="order-first">
             <h1 className="text-2xl pb-2 ">Info</h1>
-            <p className="pb-2 flex items-center gap-x-2 text-lg text-white">
+            <p
+              className="pb-2 flex items-center gap-x-2 text-lg text-white"
+              onClick={handleClick}
+            >
               <FaHome className="" />
               <Link to="">Home</Link>
             </p>
-            <p className="pb-2 flex items-center gap-x-2 text-lg ">
+            <p
+              className="pb-2 flex items-center gap-x-2 text-lg "
+              onClick={handleClick}
+            >
               <FaBook />
               <Link to="/ebooks">E-books</Link>
             </p>
-            <p className="pb-2 flex items-center gap-x-2 text-lg ">
+            <p
+              className="pb-2 flex items-center gap-x-2 text-lg "
+              onClick={handleClick}
+            >
               <BsCardList />
               <Link to="/blogs">Blogs</Link>
             </p>
-            <p className="pb-2 flex items-center gap-x-2 text-lg ">
+            <p
+              className="pb-2 flex items-center gap-x-2 text-lg "
+              onClick={handleClick}
+            >
               <IoIosPeople />
               <Link to="">About Us</Link>
             </p>

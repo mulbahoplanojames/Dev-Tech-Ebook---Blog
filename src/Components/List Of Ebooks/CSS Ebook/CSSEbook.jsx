@@ -25,7 +25,7 @@ const CSSEbook = () => {
             Happy Learning !
           </p>
 
-          <Link to="">
+          <Link to="/ebooks/cssbook/cssebookpdf">
             <Button text={"Download"} />
           </Link>
         </div>
