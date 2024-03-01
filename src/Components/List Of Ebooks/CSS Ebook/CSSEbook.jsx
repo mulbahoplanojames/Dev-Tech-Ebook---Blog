@@ -2,6 +2,7 @@ import Button from "../../../Interfaces/Button";
 import CSSImage from "/src/assets/css.jpg";
 import InstagramCallToActionTwo from "../../CallTOAction/CallToActionTwo";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
+import { Link } from "react-router-dom";
 
 const CSSEbook = () => {
   return (
@@ -24,7 +25,9 @@ const CSSEbook = () => {
             Happy Learning !
           </p>
 
-          <Button text={"Download"} />
+          <Link to="">
+            <Button text={"Download"} />
+          </Link>
         </div>
       </div>
 

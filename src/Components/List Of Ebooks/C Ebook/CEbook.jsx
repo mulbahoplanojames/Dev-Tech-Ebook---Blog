@@ -2,6 +2,7 @@ import Button from "../../../Interfaces/Button";
 import CImage from "/src/assets/C.png";
 import TelegramCallToAction from "../../CallTOAction/CallToAction";
 import RelatedEbooks from "../../Related Ebooks/RelatedEbooks";
+import { Link } from "react-router-dom";
 
 const CEbook = () => {
   return (
@@ -55,7 +56,9 @@ const CEbook = () => {
               </ol>
             </div>
           </div>
-          <Button text={"Download"} />
+          <Link to="/ebooks/cbook/cebookpdf">
+            <Button text={"View and Download"} />
+          </Link>
         </div>
       </div>
 

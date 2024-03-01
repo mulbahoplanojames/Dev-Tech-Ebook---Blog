@@ -22,6 +22,8 @@ import PythonEbookPDF from "./Ebooks PDF Pages/Python/PythonEbookPDF";
 import HtmlEbookPDF from "./Ebooks PDF Pages/HTML/HtmlEbookPDF";
 import JavaEbookPDF from "./Ebooks PDF Pages/Java/JavaEbookPDF";
 import CPlusEbookPDF from "./Ebooks PDF Pages/C Plus-Plus/CPlusEbookPDF";
+import CEbookPDF from "./Ebooks PDF Pages/C/CEbookPDF";
+
 
 const App = () => {
   useEffect(() => {
@@ -42,8 +44,8 @@ const App = () => {
           <Route path="/blogs" element={<Blog />} />
           <Route path="/contact-us" element={<ContactUs />} />
           {/* //! The below are the imported Ebooks */}
-          <Route path="/ebooks/pythonebook" element={<PythonEbook />} />
           <Route path="/ebooks/javaScriptebook" element={<JavaScriptEbook />} />
+          <Route path="/ebooks/pythonebook" element={<PythonEbook />} />
           <Route path="/ebooks/htmlebook" element={<HtmlEbook />} />
           <Route path="/ebooks/javaebook" element={<JavaEbook />} />
           <Route path="/ebooks/Cebook" element={<CEbook />} />
@@ -70,6 +72,7 @@ const App = () => {
             path="/ebooks/cplusebook/cplusebookpdf"
             element={<CPlusEbookPDF />}
           />
+          <Route path="/ebooks/cbook/cebookpdf" element={<CEbookPDF />} />
         </Routes>
         <Footer />
       </BrowserRouter>
