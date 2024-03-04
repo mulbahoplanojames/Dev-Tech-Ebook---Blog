@@ -1,10 +1,10 @@
 import { Worker, Viewer } from "@react-pdf-viewer/core";
-const pdfFile = "/src/javascript.pdf";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
+import pdfFile from "/src/PDFS/javascript.pdf";
 
 const JavaEbookPDF = () => {
   const [searchResult, setSearchResult] = useState({
