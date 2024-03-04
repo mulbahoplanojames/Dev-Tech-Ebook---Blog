@@ -1,40 +1,62 @@
 import { Worker, Viewer } from "@react-pdf-viewer/core";
-const pdfFile = "/src/javascript.pdf";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
+import pdfFile from "/src/PDFS/javascript.pdf";
 
 const HtmlEbookPDF = () => {
-  const [searchResult, setSearchResult] = useState({
-    word: "",
-    partOfSpeech: "....",
-    definition: ".....",
+  const [generatedResult, setGeneratedResult] = useState({
+    result: "",
+    aiName: "",
+    user: "",
   });
   const [name, setName] = useState("");
+  const [prompt, setPrompt] = useState("");
 
-  useEffect(() => {
-    handleFetch();
-  }, []);
+  const API_KEY = "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";
+  const API_URL = "https://api.openai.com/v1/chat/completions";
 
   const handleFetch = () => {
     axios
-      .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${name}`)
-      .then((res) => {
-        // console.log(res.data[0]);
-        setSearchResult({
-          ...searchResult,
-          word: res.data[0].word,
-          partOfSpeech: res.data[0].meanings[0].partOfSpeech,
-          definition: res.data[0].meanings[0].definitions[0].definition,
-        });
+      .post(
+        API_URL,
+        {
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: name }],
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+          },
+        }
+      )
+      .then((response) => {
+        if (
+          response.data &&
+          response.data.choices &&
+          response.data.choices[0] &&
+          response.data.choices[0].message &&
+          response.data.choices[0].message.content
+        ) {
+          console.log(response.data.choices[0].message.content);
+          setGeneratedResult({
+            ...generatedResult,
+            result: ` ${response.data.choices[0].message.content}`,
+            aiName: "🤖 Dev!Tech Ai",
+            user: "👤 You",
+          });
+          setPrompt(name);
+          setName("");
+        } else {
+          console.error("Invalid response format");
+        }
       })
-      .then((err) => {
-        console.error(err);
+      .catch((error) => {
+        console.error("Error fetching data:", error);
       });
-
-    setName("");
   };
 
   return (
@@ -51,14 +73,14 @@ const HtmlEbookPDF = () => {
               <Viewer fileUrl={pdfFile} initialPage={1} defaultScale={0.48} />
             </div>
           </Worker>
-          <aside className="h-fit shadow-xl shadow-black bg-slate-600 col-span-4 px-2 py-4">
+          <aside className="h-fit shadow-xl shadow-slate-900 bg-1 col-span-4 px-2 py-4">
             <h1 className="text-4xl text-center pb-7 text-white">
-              Search Terms
+              Dev!Tech AI
             </h1>
-            <div className="flex items-center gap-3 pb-10">
+            <div className="flex items-center gap-3 pb-4">
               <input
                 type="text"
-                placeholder="Search...."
+                placeholder="Ask me anything..."
                 className="w-10/12 h-12 outline-none border-none px-5 rounded-md bg-2"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
@@ -69,13 +91,10 @@ const HtmlEbookPDF = () => {
               />
             </div>
             <div className="text-white">
-              <h1 className="text-xl pb-4">Word : {searchResult.word}</h1>
-              <h1 className="text-xl pb-4">
-                Part Of Speech : {searchResult.partOfSpeech}
-              </h1>
-              <h1 className="text-xl pb-4">
-                Meaning : {searchResult.definition}
-              </h1>
+              <p className="text-xl">{generatedResult.user}</p>
+              <p className="pb-4">{prompt}</p>
+              <p className="pb-1 text-xl">{generatedResult.aiName}</p>
+              <p className="pb-2">{generatedResult.result}</p>
             </div>
           </aside>
         </div>
