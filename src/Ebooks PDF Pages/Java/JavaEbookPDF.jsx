@@ -15,7 +15,7 @@ const JavaEbookPDF = () => {
   const [name, setName] = useState("");
   const [prompt, setPrompt] = useState("");
 
-  const API_KEY = "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";
+  const API_KEY = "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";
   const API_URL = "https://api.openai.com/v1/chat/completions";
 
   const handleFetch = () => {
