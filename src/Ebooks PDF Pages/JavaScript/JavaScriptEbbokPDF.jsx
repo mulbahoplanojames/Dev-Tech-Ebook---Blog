@@ -1,7 +1,7 @@
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import pdfFile from "/src/PDFS/javascript.pdf";
