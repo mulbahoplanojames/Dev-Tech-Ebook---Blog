@@ -73,7 +73,7 @@ const CSSEboookPDF = () => {
               <Viewer fileUrl={pdfFile} initialPage={1} defaultScale={0.48} />
             </div>
           </Worker>
-          <aside className="h-fit shadow-xl shadow-slate-900 bg-1 col-span-4 px-2 py-4">
+          <aside className="h-fit shadow-xl shadow-slate-900 bg-1 col-span-4 px-2 py-4 rounded-lg">
             <h1 className="text-4xl text-center pb-7 text-white">
               Dev!Tech AI
             </h1>
