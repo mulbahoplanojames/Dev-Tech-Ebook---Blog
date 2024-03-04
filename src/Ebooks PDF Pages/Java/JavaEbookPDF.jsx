@@ -7,34 +7,46 @@ import Button from "../../Interfaces/Button";
 import pdfFile from "/src/PDFS/javascript.pdf";
 
 const JavaEbookPDF = () => {
-  const [searchResult, setSearchResult] = useState({
-    word: "",
-    partOfSpeech: "....",
-    definition: ".....",
+  const [generatedResult, setGeneratedResult] = useState({
+    result: "",
+    aiName: "",
+    user: "",
   });
   const [name, setName] = useState("");
+  const [prompt, setPrompt] = useState("");
 
-  useEffect(() => {
-    handleFetch();
-  }, []);
+  const API_KEY = "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";
+  const API_URL = "https://api.openai.com/v1/chat/completions";
 
   const handleFetch = () => {
     axios
-      .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${name}`)
-      .then((res) => {
-        // console.log(res.data[0]);
-        setSearchResult({
-          ...searchResult,
-          word: res.data[0].word,
-          partOfSpeech: res.data[0].meanings[0].partOfSpeech,
-          definition: res.data[0].meanings[0].definitions[0].definition,
+      .post(
+        API_URL,
+        {
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: name }],
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${API_KEY}`,
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data.choices[0].message.content);
+        setGeneratedResult({
+          ...generatedResult,
+          result: ` ${response.data.choices[0].message.content}`,
+          aiName: "🤖 Dev!Tech Ai",
+          user: "👤 You",
         });
+        setPrompt(name);
+        setName("");
       })
-      .then((err) => {
-        console.error(err);
+      .catch((error) => {
+        console.error(error);
       });
-
-    setName("");
   };
 
   return (
@@ -55,7 +67,7 @@ const JavaEbookPDF = () => {
             <h1 className="text-4xl text-center pb-7 text-white">
               Search Terms
             </h1>
-            <div className="flex items-center gap-3 pb-10">
+            <div className="flex items-center gap-3 pb-4">
               <input
                 type="text"
                 placeholder="Search...."
@@ -69,13 +81,10 @@ const JavaEbookPDF = () => {
               />
             </div>
             <div className="text-white">
-              <h1 className="text-xl pb-4">Word : {searchResult.word}</h1>
-              <h1 className="text-xl pb-4">
-                Part Of Speech : {searchResult.partOfSpeech}
-              </h1>
-              <h1 className="text-xl pb-4">
-                Meaning : {searchResult.definition}
-              </h1>
+              <p className="text-xl">{generatedResult.user}</p>
+              <p className="pb-4">{prompt}</p>
+              <p className="pb-1 text-xl">{generatedResult.aiName}</p>
+              <p className="pb-2">{generatedResult.result}</p>
             </div>
           </aside>
         </div>
