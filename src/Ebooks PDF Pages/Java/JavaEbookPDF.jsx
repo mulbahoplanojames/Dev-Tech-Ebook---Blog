@@ -63,14 +63,14 @@ const JavaEbookPDF = () => {
               <Viewer fileUrl={pdfFile} initialPage={1} defaultScale={0.48} />
             </div>
           </Worker>
-          <aside className="h-fit shadow-xl shadow-black bg-slate-600 col-span-4 px-2 py-4">
+          <aside className="h-fit shadow-xl shadow-slate-900 bg-1 col-span-4 px-2 py-4">
             <h1 className="text-4xl text-center pb-7 text-white">
-              Search Terms
+              Dev!Tech AI
             </h1>
             <div className="flex items-center gap-3 pb-4">
               <input
                 type="text"
-                placeholder="Search...."
+                placeholder="Ask me anything..."
                 className="w-10/12 h-12 outline-none border-none px-5 rounded-md bg-2"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
