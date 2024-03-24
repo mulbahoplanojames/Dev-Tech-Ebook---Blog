@@ -1,6 +1,7 @@
 import OffersCard from "../Offers-Card/OffersCard";
 import Ebook from "/src/assets/ebook.png";
 import Blog from "/src/assets/blog.png";
+import "animate.css";
 
 const Offers = () => {
 	return (

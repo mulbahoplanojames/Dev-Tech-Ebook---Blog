@@ -1,8 +1,8 @@
-import React from "react";
 import EbookCard from "../EbooksCard/EbookCard";
 import { ourEbooks } from "../../Data/EbooksData";
 import Button from "../../Interfaces/Button";
 import { Link } from "react-router-dom";
+import "animate.css";
 
 const OurEbooks = () => {
 	return (
