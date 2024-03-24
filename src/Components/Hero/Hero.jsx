@@ -6,7 +6,7 @@ const Hero = () => {
 		<>
 			<div className='lg:py-20 py-14 px-3 lg:px-12 mt-10'>
 				<div className='hero'>
-					<div className='max-w-xl lg:py-6 lg:px-10 py-3 px-3'>
+					<div className='max-w-xl lg:py-6 lg:px-10 py-3 px-3  animate__animated animate__fadeInUp'>
 						<h3 className='text-lg pb-4'>_Dev!Tech</h3>
 						<h1 className='lg:text-4xl text-3xl font-semibold pb-4'>
 							Let &apos;s Learn Together
@@ -20,7 +20,7 @@ const Hero = () => {
 							relevant, and shape a successful path in technology.
 						</p>
 					</div>
-					<div className='max-w-xl lg:h-96 sm:h-80  h-80 rounded-md order-first lg:order-last md:order-last animate__animated '>
+					<div className='max-w-xl lg:h-96 sm:h-80  h-80 rounded-md order-first lg:order-last md:order-last animate__animated animate__fadeInDown'>
 						<img
 							src={heroImg}
 							alt='Image of team working together'
