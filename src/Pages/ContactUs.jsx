@@ -1,6 +1,6 @@
 import { IoIosMail } from "react-icons/io";
 import { MdPhoneInTalk, MdLocationOn } from "react-icons/md";
-import Button from "../../Interfaces/Button";
+import Button from "../Interfaces/Button";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
