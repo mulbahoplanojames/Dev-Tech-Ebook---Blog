@@ -4,10 +4,8 @@
 
 ## Features
 
-- Display the pricing of each course
-- The user can send a request through the request or feedback form
-- The user can join the community section to participate in solving problems or asking questions.
-- The user can be able to obtain a job based on his or her performance
+- Pages: Navigate through different pages such as Home, Ebook, Blog, and Contact Us.
+- Ebooks: Access various ebooks on different topics including Python, JavaScript, HTML, Java, C, C++, and CSS.
 
 ## Technologies Used
 
