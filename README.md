@@ -9,6 +9,14 @@
 - PDF Ebooks: Download or read PDF versions of the ebooks directly from the website.
 - Feedback: Users can provide feedback, ask questions, or make suggestions using the contact form.
 
+## Usage
+Once the application is running locally, you can explore the different sections by navigating through the navigation bar. Here's a brief overview:
+
+- Home: Landing page of the application.
+- Ebook: Explore and access different ebooks.
+- Blog: Read informative blog posts.
+- Contact Us: Send feedback, queries, or suggestions to the developers.
+
 ## Technologies Used
 
 - React
