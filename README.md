@@ -19,9 +19,10 @@ Once the application is running locally, you can explore the different sections 
 
 ## Technologies Used
 
-- React
-- react-router-dom
-- Tailwind CSS
+- react-router-dom: Used for routing within the application.
+- sweetalert2: Used for displaying informative messages to the users.
+- react: JavaScript library for building user interfaces.
+- tailwind Css: Use for styling user interfaces.
 
 ## Getting Started
 
