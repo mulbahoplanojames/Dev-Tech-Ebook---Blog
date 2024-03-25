@@ -6,6 +6,8 @@
 
 - Pages: Navigate through different pages such as Home, Ebook, Blog, and Contact Us.
 - Ebooks: Access various ebooks on different topics including Python, JavaScript, HTML, Java, C, C++, and CSS.
+- PDF Ebooks: Download or read PDF versions of the ebooks directly from the website.
+- Feedback: Users can provide feedback, ask questions, or make suggestions using the contact form.
 
 ## Technologies Used
 
