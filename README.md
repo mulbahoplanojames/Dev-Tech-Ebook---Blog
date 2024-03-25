@@ -1,6 +1,6 @@
 # Dev!Tech Ebooks and Blog posts.
 
-# This is a web application for accessing ebooks and blogs developed using React. It provides a user-friendly interface to navigate 
+## This is a web application for accessing ebooks and blogs developed using React. It provides a user-friendly interface to navigate through different sections of the website.
 
 ## Features
 
