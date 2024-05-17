@@ -4,36 +4,56 @@ import Button from "../Interfaces/Button";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
+/**
+ * ContactUs component displays a form for users to send messages
+ * and also displays contact information of the company
+ */
 const ContactUs = () => {
+	// State to store the result of the form submission
 	const [result, setResult] = useState("");
 
+	/**
+	 * Function to handle form submission
+	 * @param {Event} event - The form submission event
+	 */
+
+	/**
+	 * This function onSubmit Handles the form submission for the contact form.
+	 * Sends the form data to the Web3Forms API and displays a success or error message.
+	 * @return {Promise<void>} - A promise that resolves when the form is submitted
+	 */
 	const onSubmit = async (event) => {
 		event.preventDefault();
-		setResult("Sending....");
-		const formData = new FormData(event.target);
+		setResult("Sending...."); // Set the result state to "Sending..."
 
-		formData.append("access_key", "562d6485-71c4-4390-9184-2c1cf99e08b5");
+		const formData = new FormData(event.target); // Create a new FormData object from the form
+
+		formData.append("access_key", "562d6485-71c4-4390-9184-2c1cf99e08b5"); // Append the access key to the form data
 
 		const res = await fetch("https://api.web3forms.com/submit", {
 			method: "POST",
 			body: formData,
-		}).then((res) => res.json());
+		}).then((res) => res.json()); // Send the form data to the Web3Forms API and parse the response as JSON
 
 		if (res.success) {
-			console.log("Success", res);
-			setResult(res.message);
-			event.target.reset();
+			// If the response is successful
+			console.log("Success", res); // Log the response to the console
+			setResult(res.message); // Set the result state to the message from the response
+			event.target.reset(); // Reset the form
 
 			Swal.fire({
+				// Display a success message using SweetAlert2
 				title: "🎉👏🙌✨🎊",
 				text: "Message sent successfully!",
 				icon: "success",
 			});
 		} else {
-			console.log("Error", res);
-			setResult(res.message);
+			// If the response is not successful
+			console.log("Error", res); // Log the response to the console
+			setResult(res.message); // Set the result state to the message from the response
 
 			Swal.fire({
+				// Display an error message using SweetAlert2
 				icon: "error",
 				title: "Oops...",
 				text: "Something went wrong!",
@@ -51,6 +71,7 @@ const ContactUs = () => {
 					<h1 className='text-4xl capitalize font-semibold'>Get in touch</h1>
 				</div>
 				<div className='grid sm:grid-cols-2 grid-cols-1 px-3 place-items-center '>
+					{/* this is a wripper for the form details */}
 					<div className='px-3 py-4'>
 						<h1 className='text-3xl pb-3'>Send us a message</h1>
 						<p className='text-xl pb-3 opacity-70'>
@@ -72,6 +93,8 @@ const ContactUs = () => {
 							KG 763 Gisozi, Kigali, Rwanda
 						</p>
 					</div>
+
+					{/* this is a wripper for the contact form */}
 					<div className=' px-1 sm:px-7 py-2 w-full'>
 						<form onSubmit={onSubmit}>
 							<div className='mb-6'>

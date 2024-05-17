@@ -4,15 +4,23 @@ import { MdOutlineCancelPresentation } from "react-icons/md";
 import navLinks from "../Constants/Constants";
 import { Link } from "react-router-dom";
 
+/**
+ * The Navbar component renders the navigation bar of this website.
+ * It contains links to different pages and a contact us button.
+ * It also has a responsive menu for smaller devices.
+ */
 const Navbar = () => {
+	// State variable to keep track of whether the menu is open or not.
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
 		<>
 			<nav className='flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl fixed top-0 w-full z-10'>
+				{/* Link to the home page */}
 				<Link to='/' className='text-3xl font-bold'>
 					Dev <span className='text-1'>!Tech</span>
 				</Link>
+				{/*//! Menu items for larger devices and mapping through the links */}
 				<ul className='max-lg:hidden'>
 					{navLinks.map((navlink) => (
 						<li key={navlink.label} className='inline-block px-10'>
@@ -25,6 +33,7 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
+				{/*//! Contact Us button */}
 				<div className='flex gap-x-2'>
 					<Link
 						to='/contact-us'
@@ -32,7 +41,7 @@ const Navbar = () => {
 					>
 						Contact &nbsp;Us
 					</Link>
-
+					{/*//! Menu toggle button for smaller devices */}
 					<TbMenu2
 						className='hidden max-lg:block cursor-pointer text-4xl'
 						onClick={() => {
@@ -42,10 +51,11 @@ const Navbar = () => {
 				</div>
 			</nav>
 
-			{/* Navbar for Smaller Devices  */}
+			{/*//! Responsive menu for smaller devices */}
 			{isMenuOpen && (
 				<div>
 					<nav className='fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  z-40'>
+						{/* Close button for the menu */}
 						<div
 							className='hidden max-lg:block fixed right-0  px-8 py-4 cursor-pointer'
 							onClick={() => {
@@ -55,6 +65,7 @@ const Navbar = () => {
 							<MdOutlineCancelPresentation className='text-4xl text-white ' />
 						</div>
 						<ul className=' lg:hidden flex flex-col items-center justify-center h-full bg-1 gap-y-7 z-40'>
+							{/* Menu items for smaller devices */}
 							{navLinks.map((navlink) => (
 								<li key={navlink.label}>
 									<Link
