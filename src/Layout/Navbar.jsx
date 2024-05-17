@@ -79,7 +79,12 @@ const Navbar = () => {
 						<ul className=' lg:hidden flex flex-col items-center justify-center h-full bg-1 gap-y-7 z-40'>
 							{/* Menu items for smaller devices */}
 							{navLinks.map((navlink) => (
-								<li key={navlink.label}>
+								<li
+									key={navlink.label}
+									onClick={() => {
+										setIsMenuOpen(!isMenuOpen);
+									}}
+								>
 									<Link
 										to={navlink.href}
 										className='font-montserrat leading-normal text-2xl text-white active:text-1 focus:text-blue-500'
