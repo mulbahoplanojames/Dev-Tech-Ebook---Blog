@@ -22,7 +22,7 @@ const Ebooks = () => {
 					{/* List of ebooks  */}
 					<div className='h-fit col-span-9 order-first sm:order-last py-6'>
 						<h1 className='text-center text-4xl pb-28'>Our Ebooks</h1>
-						<div className='grid sm:grid-cols-3  place-items-center gap-8'>
+						<div className='grid sm:grid-cols-3  place-items-center sm:gap-10 gap-y-16'>
 							{ebooks.map((ebook) => {
 								return (
 									<EbookCard
