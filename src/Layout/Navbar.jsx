@@ -48,14 +48,14 @@ const Navbar = () => {
 				<div className='flex gap-x-2'>
 					<Link
 						to='/contact-us'
-						className='bg-1 py-1.5 lg:px-4 px-4 text-base lg:text-lg rounded-lg text-white hover:opacity-50'
+						className='bg-1 py-1.5 lg:px-4 px-3 text-sm lg:text-lg rounded-lg text-white hover:opacity-50'
 					>
 						Contact &nbsp;Us
 					</Link>
 					<DarkmodeIcon />
 					{/*//! Menu toggle button for smaller devices */}
 					<TbMenu2
-						className='hidden max-lg:block cursor-pointer text-4xl'
+						className='hidden max-lg:block cursor-pointer text-3xl'
 						onClick={() => {
 							setIsMenuOpen(!isMenuOpen);
 						}}
@@ -74,7 +74,7 @@ const Navbar = () => {
 								setIsMenuOpen(!isMenuOpen);
 							}}
 						>
-							<MdOutlineCancelPresentation className='text-4xl text-white ' />
+							<MdOutlineCancelPresentation className='text-3xl text-white ' />
 						</div>
 						<ul className=' lg:hidden flex flex-col items-center justify-center h-full bg-1 gap-y-7 z-40'>
 							{/* Menu items for smaller devices */}

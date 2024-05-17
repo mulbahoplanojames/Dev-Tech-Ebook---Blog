@@ -10,7 +10,7 @@ const Hero = () => {
 	return (
 		<>
 			<div className='lg:py-20 py-14 px-3 lg:px-12 mt-10'>
-				<div className='hero'>
+				<div className='tw_hero'>
 					{/* The text section */}
 					<div className='max-w-xl lg:py-6 lg:px-10 py-3 px-3  animate__animated animate__fadeInUp'>
 						<h3 className='text-lg pb-4'>_Dev!Tech</h3>
@@ -20,7 +20,7 @@ const Hero = () => {
 						<p className='text-lg'>{hero_Text}</p>
 					</div>
 					{/* The image section */}
-					<div className='max-w-xl lg:h-96 sm:h-80  h-80 rounded-md order-first lg:order-last md:order-last animate__animated animate__fadeInDown'>
+					<div className='max-w-xl lg:h-96 sm:h-80 h-80 rounded-md order-first lg:order-last md:order-last animate__animated animate__fadeInDown'>
 						<img
 							src={heroImg}
 							alt='Image of team working together'

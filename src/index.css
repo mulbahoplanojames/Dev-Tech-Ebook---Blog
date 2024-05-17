@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @layer components {
-  .hero {
-    @apply grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  gap-7  items-center justify-center;
-  }
-  .btn {
-    @apply bg-1 py-1 px-6 text-lg rounded-lg text-white;
-  }
-  .call-to-action {
-    @apply w-full h-48 lg:rounded-full rounded-lg  flex justify-between items-center gap-x-8 lg:px-16 px-3 shadow-lg cursor-pointer animate-bounce;
-  }
-  .icon-wripper {
-    @apply w-11 h-11 rounded-md flex justify-center items-center cursor-pointer font-bold border-2 hover:shadow-xl;
-  }
-  .sidebar {
-    @apply shadow-lg  border-r-4 border-black h-fit col-span-3 px-6 py-8 grid grid-cols-1 place-items-center gap-y-8 cursor-pointer;
-  }
+	.tw_hero {
+		@apply grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1  gap-7  items-center justify-center;
+	}
+	.btn {
+		@apply bg-1 py-1 px-6 text-lg rounded-lg text-white;
+	}
+	.call-to-action {
+		@apply w-full h-48 lg:rounded-full rounded-lg  flex justify-between items-center gap-x-8 lg:px-16 px-3 shadow-lg cursor-pointer animate-bounce;
+	}
+	.icon-wripper {
+		@apply w-11 h-11 rounded-md flex justify-center items-center cursor-pointer font-bold border-2 hover:shadow-xl;
+	}
+	.sidebar {
+		@apply shadow-lg  border-r-4 border-black h-fit col-span-3 px-6 py-8 grid grid-cols-1 place-items-center gap-y-8 cursor-pointer;
+	}
 }
