@@ -130,3 +130,10 @@ export const advertisementDetails = [
 	{ id: 3, label: "JavaScript Essentials", image: Javascript },
 	{ id: 4, label: "C Essentials", image: C2 },
 ];
+
+export const hero_Text = `Dev!Tech is the best place to learn ad grow your skills or carrer
+in the IT sector. Best contents on latest technologies including
+JavaScript, PYthon, HTML, CSS, C++, Java free of cost. With a
+commitment to accessibility, Dev!Tech fosters a collaborative
+community. Join Dev!Tech to unlock your full potential, stay
+relevant, and shape a successful path in technology.`;
