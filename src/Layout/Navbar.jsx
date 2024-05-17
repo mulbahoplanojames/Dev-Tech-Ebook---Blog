@@ -18,6 +18,10 @@ const Navbar = () => {
 	// State variable to keep track of whether the menu is open or not.
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+	/*
+	 * I created this object to store all of the data that i want to share to all
+	 * parts of this project. It is used in the DarkmodeIcon component.
+	 */
 	const { darkMode } = useContext(AppContext);
 
 	return (
