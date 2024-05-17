@@ -3,6 +3,11 @@ import { TbMenu2 } from "react-icons/tb";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import navLinks from "../Constants/Constants";
 import { Link } from "react-router-dom";
+import DarkmodeIcon from "../Components/DarkMode_Icon/DarkmodeIcon";
+
+//usecontext and Appcontext provider for darkmode
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContext";
 
 /**
  * The Navbar component renders the navigation bar of this website.
@@ -13,9 +18,15 @@ const Navbar = () => {
 	// State variable to keep track of whether the menu is open or not.
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+	const { darkMode } = useContext(AppContext);
+
 	return (
 		<>
-			<nav className='flex justify-between items-center lg:px-20 px-4 py-4 bg-white shadow-xl fixed top-0 w-full z-10'>
+			<nav
+				className={`flex justify-between items-center lg:px-20 px-4 py-4  shadow-xl fixed top-0 w-full z-10	${
+					darkMode ? "bg-[#1d232a]" : "bg-white"
+				}`}
+			>
 				{/* Link to the home page */}
 				<Link to='/' className='text-3xl font-bold'>
 					Dev <span className='text-1'>!Tech</span>
@@ -41,6 +52,7 @@ const Navbar = () => {
 					>
 						Contact &nbsp;Us
 					</Link>
+					<DarkmodeIcon />
 					{/*//! Menu toggle button for smaller devices */}
 					<TbMenu2
 						className='hidden max-lg:block cursor-pointer text-4xl'

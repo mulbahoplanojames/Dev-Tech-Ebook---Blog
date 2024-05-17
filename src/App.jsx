@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Swal from "sweetalert2";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 //! Pages
 import Home from "./Pages/Home";
@@ -29,6 +29,7 @@ import JavaEbookPDF from "./Ebooks PDF Pages/Java/JavaEbookPDF";
 import CPlusEbookPDF from "./Ebooks PDF Pages/C Plus-Plus/CPlusEbookPDF";
 import CEbookPDF from "./Ebooks PDF Pages/C/CEbookPDF";
 import CSSEbookPDF from "./Ebooks PDF Pages/CSS/CSSEbookPDF";
+import { AppContext } from "./Context/AppContext";
 
 /**
  * This App component is the main component of this application.
@@ -36,6 +37,8 @@ import CSSEbookPDF from "./Ebooks PDF Pages/CSS/CSSEbookPDF";
  * It also displays a welcome message using the SweetAlert2 library.
  */
 const App = () => {
+	const { darkModeStyle } = useContext(AppContext);
+
 	/**
 	 *I created a useEffect hook it is used to display a welcome message using the SweetAlert2 library.
 	 * The message is displayed when the component is mounted.
@@ -50,54 +53,62 @@ const App = () => {
 
 	return (
 		<>
-			{/* BrowserRouter component is used for client-side routing. */}
-			<BrowserRouter>
-				{/*//! Navbar component displays the navigation bar. */}
-				<Navbar />
-				<Routes>
-					{/*//! The below are the Pages */}
-					<Route path='/' element={<Home />} /> {/* Home page */}
-					<Route path='/ebooks' element={<Ebook />} /> {/* Ebook page */}
-					<Route path='/blogs' element={<Blog />} /> {/* Blog page */}
-					<Route path='/contact-us' element={<ContactUs />} />
-					{/* Contact us page */}
-					<Route path='*' element={<PageNotFound />} />
-					{/* Page not found page */}
-					{/* //! The below are the Ebooks Individual Pages */}
-					<Route path='/ebooks/javaScriptebook' element={<JavaScriptEbook />} />
-					<Route path='/ebooks/pythonebook' element={<PythonEbook />} />
-					<Route path='/ebooks/htmlebook' element={<HtmlEbook />} />
-					<Route path='/ebooks/javaebook' element={<JavaEbook />} />
-					<Route path='/ebooks/Cebook' element={<CEbook />} />
-					<Route path='/ebooks/C++ebook' element={<CPlusEbook />} />
-					<Route path='/ebooks/cssebook' element={<CSSEbook />} />
-					{/* //! The below are the PDFS Ebooks Pages where you can access individual Ebooks for Reading or downloading */}
-					<Route
-						path='/ebooks/javaScriptebook/javaScriptebookpdf'
-						element={<JavaScriptEbbokPDF />}
-					/>
-					<Route
-						path='/ebooks/pythonebook/pythonebookpdf'
-						element={<PythonEbookPDF />}
-					/>
-					<Route
-						path='/ebooks/htmlebook/htmlebookpdf'
-						element={<HtmlEbookPDF />}
-					/>
-					<Route
-						path='/ebooks/javaebook/javaebookpdf'
-						element={<JavaEbookPDF />}
-					/>
-					<Route
-						path='/ebooks/cplusebook/cplusebookpdf'
-						element={<CPlusEbookPDF />}
-					/>
-					<Route path='/ebooks/cbook/cebookpdf' element={<CEbookPDF />} />
-					<Route path='/ebooks/cssbook/cssebookpdf' element={<CSSEbookPDF />} />
-				</Routes>
-				{/*//! Footer component displays the footer. */}
-				<Footer />
-			</BrowserRouter>
+			<div className='w-screen h-screen overflow-y-auto' style={darkModeStyle}>
+				{/* BrowserRouter component is used for client-side routing. */}
+				<BrowserRouter>
+					{/*//! Navbar component displays the navigation bar. */}
+					<Navbar />
+					<Routes>
+						{/*//! The below are the Pages */}
+						<Route path='/' element={<Home />} /> {/* Home page */}
+						<Route path='/ebooks' element={<Ebook />} /> {/* Ebook page */}
+						<Route path='/blogs' element={<Blog />} /> {/* Blog page */}
+						<Route path='/contact-us' element={<ContactUs />} />
+						{/* Contact us page */}
+						<Route path='*' element={<PageNotFound />} />
+						{/* Page not found page */}
+						{/* //! The below are the Ebooks Individual Pages */}
+						<Route
+							path='/ebooks/javaScriptebook'
+							element={<JavaScriptEbook />}
+						/>
+						<Route path='/ebooks/pythonebook' element={<PythonEbook />} />
+						<Route path='/ebooks/htmlebook' element={<HtmlEbook />} />
+						<Route path='/ebooks/javaebook' element={<JavaEbook />} />
+						<Route path='/ebooks/Cebook' element={<CEbook />} />
+						<Route path='/ebooks/C++ebook' element={<CPlusEbook />} />
+						<Route path='/ebooks/cssebook' element={<CSSEbook />} />
+						{/* //! The below are the PDFS Ebooks Pages where you can access individual Ebooks for Reading or downloading */}
+						<Route
+							path='/ebooks/javaScriptebook/javaScriptebookpdf'
+							element={<JavaScriptEbbokPDF />}
+						/>
+						<Route
+							path='/ebooks/pythonebook/pythonebookpdf'
+							element={<PythonEbookPDF />}
+						/>
+						<Route
+							path='/ebooks/htmlebook/htmlebookpdf'
+							element={<HtmlEbookPDF />}
+						/>
+						<Route
+							path='/ebooks/javaebook/javaebookpdf'
+							element={<JavaEbookPDF />}
+						/>
+						<Route
+							path='/ebooks/cplusebook/cplusebookpdf'
+							element={<CPlusEbookPDF />}
+						/>
+						<Route path='/ebooks/cbook/cebookpdf' element={<CEbookPDF />} />
+						<Route
+							path='/ebooks/cssbook/cssebookpdf'
+							element={<CSSEbookPDF />}
+						/>
+					</Routes>
+					{/*//! Footer component displays the footer. */}
+					<Footer />
+				</BrowserRouter>
+			</div>
 		</>
 	);
 };
