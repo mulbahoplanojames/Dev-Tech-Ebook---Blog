@@ -30,26 +30,39 @@ import CPlusEbookPDF from "./Ebooks PDF Pages/C Plus-Plus/CPlusEbookPDF";
 import CEbookPDF from "./Ebooks PDF Pages/C/CEbookPDF";
 import CSSEbookPDF from "./Ebooks PDF Pages/CSS/CSSEbookPDF";
 
+/**
+ * This App component is the main component of this application.
+ * It contains the routing and layout of this application.
+ * It also displays a welcome message using the SweetAlert2 library.
+ */
 const App = () => {
+	/**
+	 *I created a useEffect hook it is used to display a welcome message using the SweetAlert2 library.
+	 * The message is displayed when the component is mounted.
+	 */
 	useEffect(() => {
 		Swal.fire({
 			title: "Welcome to Dev!Tech Ebooks and Blogs",
-			text: "Feel free to reach out through the contact from. Your feedback, questions and suggestions are important to us",
+			text: "Feel free to reach out through the contact form. Your feedback, questions, and suggestions are important to us",
 			icon: "info",
 		});
 	}, []);
 
 	return (
 		<>
+			{/* BrowserRouter component is used for client-side routing. */}
 			<BrowserRouter>
+				{/*//! Navbar component displays the navigation bar. */}
 				<Navbar />
 				<Routes>
-					{/* //! The below are the Pages */}
-					<Route path='/' element={<Home />} />
-					<Route path='/ebooks' element={<Ebook />} />
-					<Route path='/blogs' element={<Blog />} />
+					{/*//! The below are the Pages */}
+					<Route path='/' element={<Home />} /> {/* Home page */}
+					<Route path='/ebooks' element={<Ebook />} /> {/* Ebook page */}
+					<Route path='/blogs' element={<Blog />} /> {/* Blog page */}
 					<Route path='/contact-us' element={<ContactUs />} />
+					{/* Contact us page */}
 					<Route path='*' element={<PageNotFound />} />
+					{/* Page not found page */}
 					{/* //! The below are the Ebooks Individual Pages */}
 					<Route path='/ebooks/javaScriptebook' element={<JavaScriptEbook />} />
 					<Route path='/ebooks/pythonebook' element={<PythonEbook />} />
@@ -82,6 +95,7 @@ const App = () => {
 					<Route path='/ebooks/cbook/cebookpdf' element={<CEbookPDF />} />
 					<Route path='/ebooks/cssbook/cssebookpdf' element={<CSSEbookPDF />} />
 				</Routes>
+				{/*//! Footer component displays the footer. */}
 				<Footer />
 			</BrowserRouter>
 		</>
