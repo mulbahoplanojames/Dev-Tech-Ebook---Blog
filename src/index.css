@@ -29,10 +29,10 @@
   border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to top, #243073, #fff);
+  background: linear-gradient(to top, #1c3d5b, #fff);
   height: 5px;
   border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to top, green, white, #243073);
+  background: linear-gradient(to top, blue, white, #1c3d5b);
 }
