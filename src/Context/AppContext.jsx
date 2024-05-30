@@ -12,7 +12,7 @@ const AppContextProvider = ({ children }) => {
 
   // I create this object to provide CSS styles for the app based on the `darkMode` state.
   const darkModeStyle = {
-    backgroundColor: darkMode ? "#23272f" : "#f8f9f5",
+    backgroundColor: darkMode ? "#23272f" : "#f6f7f9",
     color: darkMode ? "white" : "#23272f",
   };
 
