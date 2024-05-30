@@ -19,3 +19,20 @@
     @apply h-fit place-items-center gap-y-8 grid grid-cols-1 col-span-3 px-6 py-8 border-r-4 border-black shadow-lg cursor-pointer;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 20px;
+}
+/* ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #243073, #fff);
+  height: 5px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to top, green, white, #243073);
+} */
