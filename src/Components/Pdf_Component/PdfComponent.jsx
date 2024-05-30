@@ -26,6 +26,7 @@ const PdfComponent = () => {
                 pageNumber={page}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
+                className={"mt-10"}
               />
             );
           })}

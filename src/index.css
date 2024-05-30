@@ -19,7 +19,3 @@
     @apply h-fit place-items-center gap-y-8 grid grid-cols-1 col-span-3 px-6 py-8 border-r-4 border-black shadow-lg cursor-pointer;
   }
 }
-
-.canvas.react-pdf__Page__canvas {
-  margin-bottom: 50px;
-}

@@ -1,5 +1,3 @@
-// import { Worker, Viewer } from "@react-pdf-viewer/core";
-// import "@react-pdf-viewer/core/lib/styles/index.css";
 import axios from "axios";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -68,10 +66,9 @@ const JavaScriptPDF = () => {
             <Button text="Dounload PDF" />
           </a>
         </div>
+        {/*//? wripper for the PDF and the aside for asking questions  */}
         <div className=" md:grid-cols-12 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5 grid grid-cols-2 px-6 pb-24">
-          {/* <Worker workerUrl='https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js'> */}
           <div className="sm:order-first h-fit bg-slate-200 px-14 lg:col-span-8 md:col-span-8 lg:overflow-hidden order-last col-span-4 overflow-auto">
-            {/* <Viewer fileUrl={pdfFile} initialPage={1} defaultScale={0.48} /> */}
             <PdfComponent />
           </div>
           {/* </Worker> */}
