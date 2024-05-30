@@ -28,11 +28,11 @@
   background: #000;
   border-radius: 20px;
 }
-/* ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, #243073, #fff);
   height: 5px;
   border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to top, green, white, #243073);
-} */
+}
