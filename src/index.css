@@ -6,8 +6,8 @@
   .tw_hero {
     @apply lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-7 grid items-center justify-center grid-cols-1;
   }
-  .btn {
-    @apply bg-1 px-6 py-1 text-lg text-white rounded-lg;
+  .tw_btn {
+    @apply bg-1 px-4 py-2 text-base text-white rounded-lg;
   }
   .call-to-action {
     @apply lg:rounded-full gap-x-8 lg:px-16 animate-bounce flex items-center justify-between w-full h-48 px-3 rounded-lg shadow-lg cursor-pointer;

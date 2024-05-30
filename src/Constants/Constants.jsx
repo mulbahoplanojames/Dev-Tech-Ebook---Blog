@@ -17,7 +17,7 @@ export const blogsInfo = [
     id: 1,
     title: "How to learn the basic of programming.",
     image: BlogImg1,
-    href: "/ebooks/javaScriptebook",
+    href: "/Posts/BlogPost_1",
   },
   {
     id: 2,

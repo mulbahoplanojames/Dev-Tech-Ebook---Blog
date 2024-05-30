@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useContext, useEffect } from "react";
 
+//? =========================================================================
 //! Pages
 import Home from "./Pages/Home";
 import Ebook from "./Pages/Ebook";
@@ -9,10 +10,12 @@ import Blog from "./Pages/Blog";
 import ContactUs from "./Pages/ContactUs";
 import PageNotFound from "./Pages/PageNotFound";
 
+//? ============================================================================
 //! Layouts
 import Navbar from "./Layout/Navbar";
 import Footer from "./Layout/Footer";
 
+//? =============================================================================
 //! Ebooks
 import PythonEbook from "./Components/List Of Ebooks/Python Ebook/PythonEbook";
 import JavaScriptEbook from "./Components/List Of Ebooks/JavaScript Ebook/JavaScriptEbook";
@@ -21,6 +24,8 @@ import JavaEbook from "./Components/List Of Ebooks/Java Ebook/JavaEbook";
 import CEbook from "./Components/List Of Ebooks/C Ebook/CEbook";
 import CPlusEbook from "./Components/List Of Ebooks/C++ Ebook/CPlusEbook";
 import CSSEbook from "./Components/List Of Ebooks/CSS Ebook/CSSEbook";
+
+//? =================================================================================
 //! PDF Ebooks
 import JavaScriptEbbokPDF from "./Ebooks PDF Pages/JavaScript/JavaScriptEbbokPDF";
 import PythonEbookPDF from "./Ebooks PDF Pages/Python/PythonEbookPDF";
@@ -31,6 +36,11 @@ import CEbookPDF from "./Ebooks PDF Pages/C/CEbookPDF";
 import CSSEbookPDF from "./Ebooks PDF Pages/CSS/CSSEbookPDF";
 import { AppContext } from "./Context/AppContext";
 
+//? =================================================================
+//! Blog Posts
+import BlogPost_1 from "./Posts/BlogPost_1";
+
+//? ==================================================================================
 //? Importing React PDF set up
 import { pdfjs } from "react-pdf";
 
@@ -38,6 +48,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
   import.meta.url
 ).toString();
+
+//todo =====================================================================================
 
 /*
  * This App component is the main component of this application.
@@ -67,14 +79,14 @@ const App = () => {
           {/*//! Navbar component displays the navigation bar. */}
           <Navbar />
           <Routes>
+            {/*//? ================================================================================= */}
             {/*//! The below are the Pages */}
-            <Route path="/" element={<Home />} /> {/* Home page */}
-            <Route path="/ebooks" element={<Ebook />} /> {/* Ebook page */}
-            <Route path="/blogs" element={<Blog />} /> {/* Blog page */}
+            <Route path="/" element={<Home />} />
+            <Route path="/ebooks" element={<Ebook />} />
+            <Route path="/blogs" element={<Blog />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            {/* Contact us page */}
             <Route path="*" element={<PageNotFound />} />
-            {/* Page not found page */}
+            {/*//? ================================================================================= */}
             {/* //! The below are the Ebooks Individual Pages */}
             <Route
               path="/ebooks/javaScriptebook"
@@ -86,6 +98,10 @@ const App = () => {
             <Route path="/ebooks/Cebook" element={<CEbook />} />
             <Route path="/ebooks/C++ebook" element={<CPlusEbook />} />
             <Route path="/ebooks/cssebook" element={<CSSEbook />} />
+            {/*//? ================================================================================= */}
+            {/*//! The below Components are for the blog posts */}
+            <Route path="/Posts/BlogPost_1" element={<BlogPost_1 />} />
+            {/*//? ================================================================================= */}
             {/* //! The below are the PDFS Ebooks Pages where you can access individual Ebooks for Reading or downloading */}
             <Route
               path="/ebooks/javaScriptebook/javaScriptebookpdf"
