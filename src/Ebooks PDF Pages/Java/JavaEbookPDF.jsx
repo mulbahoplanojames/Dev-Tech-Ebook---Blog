@@ -1,10 +1,10 @@
-import { Worker, Viewer } from "@react-pdf-viewer/core";
-import "@react-pdf-viewer/core/lib/styles/index.css";
 import axios from "axios";
-import { useState} from "react";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
-import pdfFile from "/src/PDFS/javascript.pdf";
+import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
+
+const PDF_FILE = "/src/PDFS_FILES/HTML.pdf";
 
 const JavaEbookPDF = () => {
   const [generatedResult, setGeneratedResult] = useState({
@@ -34,49 +34,59 @@ const JavaEbookPDF = () => {
         }
       )
       .then((response) => {
-        console.log(response.data.choices[0].message.content);
-        setGeneratedResult({
-          ...generatedResult,
-          result: ` ${response.data.choices[0].message.content}`,
-          aiName: "🤖 Dev!Tech Ai",
-          user: "👤 You",
-        });
-        setPrompt(name);
-        setName("");
+        if (
+          response.data &&
+          response.data.choices &&
+          response.data.choices[0] &&
+          response.data.choices[0].message &&
+          response.data.choices[0].message.content
+        ) {
+          console.log(response.data.choices[0].message.content);
+          setGeneratedResult({
+            ...generatedResult,
+            result: ` ${response.data.choices[0].message.content}`,
+            aiName: "🤖 Dev!Tech Ai",
+            user: "👤 You",
+          });
+          setPrompt(name);
+          setName("");
+        } else {
+          console.error("Invalid response format");
+        }
       })
       .catch((error) => {
-        console.error(error);
+        console.error("Error fetching data:", error);
       });
   };
 
   return (
     <>
       <div className="mt-32">
-        <div className="ml-6 mb-5">
-          <a href={pdfFile} download={"JavaScript-ebook.pdf"}>
+        <div className="mb-5 ml-6">
+          <a href={PDF_FILE} download={"JavaScript-ebook.pdf"}>
             <Button text="Dounload PDF" />
           </a>
         </div>
-        <div className=" grid md:grid-cols-12 grid-cols-2 px-6 pb-24 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5">
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-            <div className="col-span-8 h-2 lg:w-pdfWripper border-2 border-black overflow-x-auto sm:order-first order-last">
-              <Viewer fileUrl={pdfFile} initialPage={1} defaultScale={0.48} />
-            </div>
-          </Worker>
-          <aside className="h-fit shadow-xl shadow-slate-900 bg-1 col-span-4 px-2 py-4">
-            <h1 className="text-4xl text-center pb-7 text-white">
+        {/*//? wripper for the PDF and the aside for asking questions  */}
+        <div className=" md:grid-cols-12 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5 grid grid-cols-2 px-6 pb-24">
+          <div className="sm:order-first h-fit bg-slate-200 lg:col-span-8 md:col-span-8 lg:overflow-hidden order-last col-span-4 px-10 overflow-hidden">
+            <PdfComponent PDF_FILE={PDF_FILE} />
+          </div>
+          {/* </Worker> */}
+          <aside className="h-fit shadow-slate-900 bg-1 col-span-4 px-2 py-4 shadow-xl">
+            <h1 className="pb-7 text-4xl text-center text-white">
               Dev!Tech AI
             </h1>
             <div className="flex items-center gap-3 pb-4">
               <input
                 type="text"
                 placeholder="Ask me anything..."
-                className="w-10/12 h-12 outline-none border-none px-5 rounded-md bg-2"
+                className="bg-2 w-10/12 h-12 px-5 border-none rounded-md outline-none"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
               />
               <FiSearch
-                className="size-11 cursor-pointer bg-white p-1 rounded-md"
+                className="size-11 p-1 bg-white rounded-md cursor-pointer"
                 onClick={handleFetch}
               />
             </div>

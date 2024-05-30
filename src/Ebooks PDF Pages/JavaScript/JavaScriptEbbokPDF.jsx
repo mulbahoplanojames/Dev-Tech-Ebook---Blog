@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
-import pdfFile from "/src/PDFS/javascript.pdf";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
+
+const PDF_FILE = "/src/PDFS_FILES/HTML.pdf";
 
 const JavaScriptPDF = () => {
   const [generatedResult, setGeneratedResult] = useState({
@@ -62,14 +63,14 @@ const JavaScriptPDF = () => {
     <>
       <div className="mt-32">
         <div className="mb-5 ml-6">
-          <a href={pdfFile} download={"JavaScript-ebook.pdf"}>
+          <a href={PDF_FILE} download={"JavaScript-ebook.pdf"}>
             <Button text="Dounload PDF" />
           </a>
         </div>
         {/*//? wripper for the PDF and the aside for asking questions  */}
         <div className=" md:grid-cols-12 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5 grid grid-cols-2 px-6 pb-24">
-          <div className="sm:order-first h-fit bg-slate-200 px-14 lg:col-span-8 md:col-span-8 lg:overflow-hidden order-last col-span-4 overflow-auto">
-            <PdfComponent />
+          <div className="sm:order-first h-fit bg-slate-200 lg:col-span-8 md:col-span-8 lg:overflow-hidden order-last col-span-4 px-10 overflow-hidden">
+            <PdfComponent PDF_FILE={PDF_FILE} />
           </div>
           {/* </Worker> */}
           <aside className="h-fit shadow-slate-900 bg-1 col-span-4 px-2 py-4 shadow-xl">
