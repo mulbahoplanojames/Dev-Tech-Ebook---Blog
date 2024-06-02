@@ -1,5 +1,6 @@
 import Button from "../../Interfaces/Button";
 import { Link } from "react-router-dom";
+import { useScrollTo } from "react-use-window-scroll";
 
 /**
  * Component for displaying an ebook card.
@@ -13,6 +14,9 @@ import { Link } from "react-router-dom";
 const EbookCard = (props) => {
   // Destructure the props
   const { title, image, href } = props;
+
+  // Scroll to the top of the page when the download button is clicked
+  const scrollTo = useScrollTo();
 
   return (
     // Render the ebook card
@@ -34,9 +38,7 @@ const EbookCard = (props) => {
             <Link to={href}>
               <Button
                 text={"View and Download"}
-                onClick={() => {
-                  window.scrollTo({ top: 0, left: 0 });
-                }}
+                onClick={() => scrollTo({ top: 0, left: 0 })}
               />
             </Link>
           </div>
