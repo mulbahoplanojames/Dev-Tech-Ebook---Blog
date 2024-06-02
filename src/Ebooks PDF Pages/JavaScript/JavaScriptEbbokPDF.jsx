@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
-const PDF_FILE = "/src/PDFS_FILES/HTML.pdf";
+const PDF_FILE = "/src/PDFS_FILES/JavaScript Notes-oplanoWebTech.pdf";
 
 const JavaScriptPDF = () => {
   const [generatedResult, setGeneratedResult] = useState({
