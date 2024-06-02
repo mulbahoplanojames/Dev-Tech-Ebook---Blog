@@ -63,7 +63,7 @@ const HtmlEbookPDF = () => {
     <>
       <div className="mt-32">
         <div className="mb-5 ml-6">
-          <a href={PDF_FILE} download={"JavaScript-ebook.pdf"}>
+          <a href={PDF_FILE} download={"html Notes-oplanoWebTech.pdf"}>
             <Button text="Dounload PDF" />
           </a>
         </div>

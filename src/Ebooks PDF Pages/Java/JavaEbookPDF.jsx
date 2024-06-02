@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
-const PDF_FILE = "/src/PDFS_FILES/HTML.pdf";
+const PDF_FILE = "/src/PDFS_FILES/Java Notes-oplanoWebTech.pdf";
 
 const JavaEbookPDF = () => {
   const [generatedResult, setGeneratedResult] = useState({
@@ -63,7 +63,7 @@ const JavaEbookPDF = () => {
     <>
       <div className="mt-32">
         <div className="mb-5 ml-6">
-          <a href={PDF_FILE} download={"JavaScript-ebook.pdf"}>
+          <a href={PDF_FILE} download={"Java Notes-oplanoWebTech.pdf"}>
             <Button text="Dounload PDF" />
           </a>
         </div>
