@@ -38,7 +38,7 @@ const EbookCard = (props) => {
             <Link to={href}>
               <Button
                 text={"View and Download"}
-                onClick={() => scrollTo({ top: 0, left: 0 })}
+                onClick={() => scrollTo(0, 0)}
               />
             </Link>
           </div>

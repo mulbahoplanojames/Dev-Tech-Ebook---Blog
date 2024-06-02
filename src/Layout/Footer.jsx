@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   // Scrolls the page to the top when a link is clicked.
   const handleClick = () => {
-    window.scrollTo({ top: 0, left: 0 });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   return (
@@ -42,7 +42,7 @@ const Footer = () => {
               <Link to="">Home</Link>
             </p>
             <p
-              className="gap-x-2  flex items-center pb-2 text-lg"
+              className="gap-x-2 flex items-center pb-2 text-lg"
               onClick={handleClick}
             >
               {/* The E-books link */}
@@ -50,7 +50,7 @@ const Footer = () => {
               <Link to="/ebooks">E-books</Link>
             </p>
             <p
-              className="gap-x-2  flex items-center pb-2 text-lg"
+              className="gap-x-2 flex items-center pb-2 text-lg"
               onClick={handleClick}
             >
               {/* The Blogs link */}
@@ -58,7 +58,7 @@ const Footer = () => {
               <Link to="/blogs">Blogs</Link>
             </p>
             <p
-              className="gap-x-2  flex items-center pb-2 text-lg"
+              className="gap-x-2 flex items-center pb-2 text-lg"
               onClick={handleClick}
             >
               {/* The About Us link */}
