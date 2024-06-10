@@ -40,15 +40,6 @@ import { AppContext } from "./Context/AppContext";
 //! Blog Posts
 import BlogPost_1 from "./Posts/BlogPost_1";
 
-//? ==================================================================================
-//? Importing React PDF set up
-import { pdfjs } from "react-pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
-  import.meta.url
-).toString();
-
 //todo =====================================================================================
 
 /*
