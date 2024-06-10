@@ -2,15 +2,6 @@ import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
-//? ==================================================================================
-//? Importing React PDF set up
-import { pdfjs } from "react-pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
-  import.meta.url
-).toString();
-
 const PDF_FILE = import.meta.env.VITE_PDF_PYTHON_PDF;
 
 // console.log(PDF_FILE);

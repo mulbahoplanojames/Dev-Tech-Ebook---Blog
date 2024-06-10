@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Document, Page } from "react-pdf";
 
+//? ==================================================================================
+//? Importing React PDF set up
+import { pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
+).toString();
+
 const PdfComponent = ({ PDF_FILE }) => {
   const [numPages, setNumPages] = useState();
   const [pageNumber, setPageNumber] = useState(1);
