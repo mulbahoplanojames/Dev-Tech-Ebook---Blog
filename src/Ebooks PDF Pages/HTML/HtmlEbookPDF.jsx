@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
-const PDF_FILE = "/src/PDFS_FILES/HTML.pdf";
+const PDF_FILE = import.meta.env.VITE_PDF_HTML_PDF;
 
 const HtmlEbookPDF = () => {
   const [generatedResult, setGeneratedResult] = useState({
@@ -15,8 +15,8 @@ const HtmlEbookPDF = () => {
   const [name, setName] = useState("");
   const [prompt, setPrompt] = useState("");
 
-  const API_KEY = "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";
-  const API_URL = "https://api.openai.com/v1/chat/completions";
+  const API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+  const API_URL = import.meta.env.VITE_OPENAI_API_URL;
 
   const handleFetch = () => {
     axios

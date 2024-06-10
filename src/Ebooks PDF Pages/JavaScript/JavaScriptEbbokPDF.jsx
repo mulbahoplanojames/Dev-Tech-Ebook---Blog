@@ -1,64 +1,12 @@
-import axios from "axios";
-import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
-const PDF_FILE = "/src/PDFS_FILES/JavaScript Notes-oplanoWebTech.pdf";
+const PDF_FILE = import.meta.env.VITE_PDF_PYTHON_PDF;
+
+// console.log(PDF_FILE);
 
 const JavaScriptPDF = () => {
-  const [generatedResult, setGeneratedResult] = useState({
-    result: "",
-    aiName: "",
-    user: "",
-  });
-  const [name, setName] = useState("");
-  const [prompt, setPrompt] = useState("");
-
-  const API_KEY = "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";
-  const API_URL = "https://api.openai.com/v1/chat/completions";
-
-  const handleFetch = () => {
-    axios
-      .post(
-        API_URL,
-        {
-          model: "gpt-3.5-turbo",
-          messages: [{ role: "user", content: name }],
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${API_KEY}`,
-          },
-        }
-      )
-      .then((response) => {
-        if (
-          response.data &&
-          response.data.choices &&
-          response.data.choices[0] &&
-          response.data.choices[0].message &&
-          response.data.choices[0].message.content
-        ) {
-          console.log(response.data.choices[0].message.content);
-          setGeneratedResult({
-            ...generatedResult,
-            result: ` ${response.data.choices[0].message.content}`,
-            aiName: "🤖 Dev!Tech Ai",
-            user: "👤 You",
-          });
-          setPrompt(name);
-          setName("");
-        } else {
-          console.error("Invalid response format");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  };
-
   return (
     <>
       <div className="mt-32">
@@ -82,19 +30,14 @@ const JavaScriptPDF = () => {
                 type="text"
                 placeholder="Ask me anything..."
                 className="bg-2 w-10/12 h-12 px-5 border-none rounded-md outline-none"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
               />
-              <FiSearch
-                className="size-11 p-1 bg-white rounded-md cursor-pointer"
-                onClick={handleFetch}
-              />
+              <FiSearch className="size-11 p-1 bg-white rounded-md cursor-pointer" />
             </div>
             <div className="text-white">
-              <p className="text-xl">{generatedResult.user}</p>
+              <p className="text-xl"></p>
               <p className="pb-4">{prompt}</p>
-              <p className="pb-1 text-xl">{generatedResult.aiName}</p>
-              <p className="pb-2">{generatedResult.result}</p>
+              <p className="pb-1 text-xl"></p>
+              <p className="pb-2"></p>
             </div>
           </aside>
         </div>
