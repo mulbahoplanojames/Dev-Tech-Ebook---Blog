@@ -12,40 +12,40 @@ import { useScrollTo } from "react-use-window-scroll";
  * @return {JSX.Element} The rendered ebook card.
  */
 const EbookCard = (props) => {
-  // Destructure the props
-  const { title, image, href } = props;
+	// Destructure the props
+	const { title, image, href } = props;
 
-  // Scroll to the top of the page when the download button is clicked
-  const scrollTo = useScrollTo();
+	// Scroll to the top of the page when the download button is clicked
+	const scrollTo = useScrollTo();
 
-  return (
-    // Render the ebook card
-    <>
-      <div className="">
-        <div className="h-80 hover:shadow-1 hover:scale-110 w-64 overflow-hidden transition duration-300 rounded-lg shadow-2xl cursor-pointer">
-          <div className="h-52 w-full">
-            {/* Render the image of the ebook */}
-            <img
-              src={image}
-              alt=""
-              className="object-scale-down w-full h-full"
-            />
-          </div>
-          <div className="text-center">
-            {/* Render the title of the ebook */}
-            <h1 className="py-3 text-2xl">{title}</h1>
-            {/* Render the download button */}
-            <Link to={href}>
-              <Button
-                text={"View and Download"}
-                onClick={() => scrollTo(0, 0)}
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+	return (
+		// Render the ebook card
+		<>
+			<div className=''>
+				<div className='h-80 hover:shadow-1 hover:scale-110 w-64 overflow-hidden transition duration-300 rounded-lg shadow-2xl cursor-pointer'>
+					<div className='h-52 w-full bg-white'>
+						{/* Render the image of the ebook */}
+						<img
+							src={image}
+							alt=''
+							className='object-scale-down w-full h-full'
+						/>
+					</div>
+					<div className='text-center'>
+						{/* Render the title of the ebook */}
+						<h1 className='py-3 text-2xl'>{title}</h1>
+						{/* Render the download button */}
+						<Link to={href}>
+							<Button
+								text={"View and Download"}
+								onClick={() => scrollTo(0, 0)}
+							/>
+						</Link>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default EbookCard;

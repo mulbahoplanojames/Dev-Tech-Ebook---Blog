@@ -2,11 +2,19 @@ import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
+// Importing the PDF file
 import Cpdf from "/public/PDFS_FILES/C-Programming-oplanoWebTech.pdf";
 
+/**
+ * CEbookPDF component is responsible for rendering the C Ebook PDF page.
+ * It contains a download button and a PDF component to display the PDF.
+ * It also includes a sidebar with a search input field.
+ */
 const CEbookPDF = () => {
+	// Making the PDF file to a constant
 	const CPDFFile = Cpdf;
 
+	// Throwing an error if the PDF file is not set
 	if (!CPDFFile) {
 		throw new Error("VITE_PDF_JAVASCRIPT environment variable not set");
 	}
@@ -15,12 +23,14 @@ const CEbookPDF = () => {
 		<>
 			<div className='mt-32'>
 				<div className='mb-5 ml-6'>
+					{/* Download button */}
 					<a href={CPDFFile} download='C++_ebook.pdf'>
 						<Button text='Download PDF' />
 					</a>
 				</div>
 				<div className='md:grid md:grid-cols-12 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5 grid grid-cols-2 px-6 pb-24'>
 					<div className='sm:order-first h-fit bg-slate-200 lg:col-span-8 md:col-span-8 lg:overflow-hidden order-last col-span-4 px-10 overflow-hidden'>
+						{/* PDF component */}
 						<PdfComponent PDF_FILE={CPDFFile} />
 					</div>
 					<aside className='h-fit shadow-slate-900 bg-1 col-span-4 px-2 py-4 shadow-xl'>

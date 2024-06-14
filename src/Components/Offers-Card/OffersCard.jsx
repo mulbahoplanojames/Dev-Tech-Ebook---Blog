@@ -11,7 +11,7 @@ const OffersCard = (props) => {
 	return (
 		<>
 			{/* Render the offer card */}
-			<div className='lg:w-Offerscard w-2 lg:h-56 h-72 rounded-lg flex overflow-hidden hover:shadow-2xl cursor-pointer'>
+			<div className='lg:w-Offerscard w-2 lg:h-56 h-72 rounded-lg flex overflow-hidden  cursor-pointer'>
 				{/* Render the image of the offer */}
 				<div className='h-full w-3 place-self-start'>
 					<img src={image} alt='' className='w-full h-full object-cover' />
