@@ -13,7 +13,7 @@ import BlogImg3 from "/src/assets/Blog3.jpg";
 import BlogImg4 from "/src/assets/blog_img.jpeg";
 import BlogImg5 from "/src/assets/blog_img1.webp";
 import BlogImg6 from "/src/assets/blog_img2.webp";
-import BlogImg7 from "/src/assets/Blog3.jpg";
+import BlogImg7 from "/src/assets/blog_img3.webp";
 
 export const blogsInfo = [
 	{
@@ -47,9 +47,9 @@ export const blogsInfo = [
 		href: "/ebooks/pythonebook",
 	},
 	{
-		id: 7,
+		id: 6,
 		title: "Google best onlie course for java Programming",
-		image: BlogImg3,
+		image: BlogImg7,
 		href: "/ebooks/htmlebook",
 	},
 ];
