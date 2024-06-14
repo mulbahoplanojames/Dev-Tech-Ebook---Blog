@@ -15,7 +15,7 @@ const CSSEbookPDF = () => {
 		<>
 			<div className='mt-32'>
 				<div className='mb-5 ml-6'>
-					<a href={CSSPDFFile} download='JavaScript-ebook.pdf'>
+					<a href={CSSPDFFile} download='CSS-ebook.pdf'>
 						<Button text='Download PDF' />
 					</a>
 				</div>
