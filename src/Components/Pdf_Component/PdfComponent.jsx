@@ -21,6 +21,11 @@ const PdfComponent = ({ PDF_FILE }) => {
 
 	return (
 		<div>
+			{numPages && (
+				<p>
+					Page {pageNumber} of {numPages}
+				</p>
+			)}
 			<Document
 				file={PDF_FILE}
 				onLoadSuccess={onDocumentLoadSuccess}
@@ -36,11 +41,6 @@ const PdfComponent = ({ PDF_FILE }) => {
 					/>
 				))}
 			</Document>
-			{numPages && (
-				<p>
-					Page {pageNumber} of {numPages}
-				</p>
-			)}
 		</div>
 	);
 };

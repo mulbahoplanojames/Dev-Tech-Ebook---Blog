@@ -15,7 +15,7 @@ const JavaEbookPDF = () => {
 		<>
 			<div className='mt-32'>
 				<div className='mb-5 ml-6'>
-					<a href={JavaPDFFile} download='CSS-ebook.pdf'>
+					<a href={JavaPDFFile} download='Java_ebook.pdf'>
 						<Button text='Download PDF' />
 					</a>
 				</div>
