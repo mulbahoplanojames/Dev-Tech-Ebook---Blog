@@ -2,12 +2,12 @@ import { FiSearch } from "react-icons/fi";
 import Button from "../../Interfaces/Button";
 import PdfComponent from "../../Components/Pdf_Component/PdfComponent";
 
-import Cpluspdf from "/public/PDFS_FILES/C++-Notes-oplanoWebTech.pdf";
+import Cpdf from "/public/PDFS_FILES/C-Programming-oplanoWebTech.pdf";
 
 const CEbookPDF = () => {
-	const CplusPDFFile = Cpluspdf;
+	const CPDFFile = Cpdf;
 
-	if (!CplusPDFFile) {
+	if (!CPDFFile) {
 		throw new Error("VITE_PDF_JAVASCRIPT environment variable not set");
 	}
 
@@ -15,13 +15,13 @@ const CEbookPDF = () => {
 		<>
 			<div className='mt-32'>
 				<div className='mb-5 ml-6'>
-					<a href={CplusPDFFile} download='C++_ebook.pdf'>
+					<a href={CPDFFile} download='C++_ebook.pdf'>
 						<Button text='Download PDF' />
 					</a>
 				</div>
 				<div className='md:grid md:grid-cols-12 sm:gap-y-3 gap-y-9 gap-x-0 md:gap-x-5 grid grid-cols-2 px-6 pb-24'>
 					<div className='sm:order-first h-fit bg-slate-200 lg:col-span-8 md:col-span-8 lg:overflow-hidden order-last col-span-4 px-10 overflow-hidden'>
-						<PdfComponent PDF_FILE={CplusPDFFile} />
+						<PdfComponent PDF_FILE={CPDFFile} />
 					</div>
 					<aside className='h-fit shadow-slate-900 bg-1 col-span-4 px-2 py-4 shadow-xl'>
 						<h1 className='pb-7 text-4xl text-center text-white'>
